@@ -1,0 +1,22 @@
+mixin sQuestions(data)
+	// start sQuestions
+	+b.SECTION.sQuestions#sQuestions&attributes(attributes)
+		.container
+			.block-panel.block-panel--right
+				.row
+					+e.col.col-xl-6
+						+b.section-title
+							h2 Мы&nbsp;знаем, что  у&nbsp;вас есть к&nbsp;нам  эти вопросы
+						+pic("question-img.png").man.d-none.d-xl-block
+					.col-xl-6
+						mixin item(i,t)
+							+e.item 
+								+pic(`question-${i}.png`,'',0)
+								+e.text!= t
+						+item(`1`,`Что если я&nbsp;буду месяцами платить за&nbsp;SEO,  а&nbsp;результата так и&nbsp;не&nbsp;будет?`)
+						+item(`2`,`Будут&nbsp;ли заявки с&nbsp;SEO качественными? Сколько из&nbsp;них купят?`)
+						+item(`3`,`Правда&nbsp;ли, что SEO может приводить посетителей на&nbsp;сайт до&nbsp;10&nbsp;раз дешевле, чем другие виды рекламы?`)
+						+item(`4`,`Как отличить хорошую SEO-компанию от&nbsp;тех, кто даёт пустые обещания?`)
+						+item(`5`,`Как контролировать работы по&nbsp;SEO, чтобы точно знать, что работа ведётся? Я&nbsp;ведь не&nbsp;специалист`)
+						+item(`6`,`А&nbsp;если у&nbsp;меня уже был SEO-специалист и&nbsp;не&nbsp;дал результат? Может у&nbsp;меня ниша слишком конкурентная?`)
+	// end sQuestions

@@ -1,0 +1,17 @@
+//- WP menu
+mixin mnu()
+	-
+		var nav= { 
+			"SEO продвижение":"#",
+			"Кейсы":"#",
+			"Услуги":"#",
+			"Цены":"#" ,
+			"Клиентам":"#",
+			"О компании":"#",
+			"Контакты":"#",
+			}
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each linkPatch, linkName in nav
+			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
+
+//- menu

@@ -1,0 +1,81 @@
+
+:root {
+	--animate-delay: 1.2s;
+	--bs-body-font-size: #{$em-base};
+
+	@include media-breakpoint-up(md) {
+
+		--sPT: #{rem(80)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(40)};
+	}
+
+	--sPT: #{rem(80 * .5)};
+	--sPB: #{rem(90 * .5)};
+	--sTPB: #{rem(40 * .5)};
+
+
+		--swiperArrowSize: #{rem(68)};
+		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		--swiperBorderColorDef: var(--bs-primary);
+		--swiperColorDef: var(--bs-primary);
+		--swiperBgDef: #ffffff;
+	
+		--swiperBorderColorDefHover: var(--bs-primary);
+		--swiperColorDefHover: var(--bs-primary);
+		--swiperBgDefHover: #ffffff;
+
+
+	--fancybox-bg: rgba(24, 24, 27/ .77);
+
+
+
+	   --carousel-button-width: 48px;
+	   --carousel-button-height: 48px;
+
+	   --carousel-button-svg-width: 24px;
+	   --carousel-button-svg-height: 24px;
+
+	   --carousel-button-svg-stroke-width: 2.5;
+	   --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+
+		 --check: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='SVGDoc' width='10' height='8' xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:avocode='https://avocode.com/' viewBox='0 0 10 8'%3E%3Cdefs%3E%3C/defs%3E%3Cdesc%3EGenerated with Avocode.%3C/desc%3E%3Cg%3E%3Cg%3E%3Ctitle%3EФигура 698 1%3C/title%3E%3Cpath d='M4.06522,7.49497c-0.23678,0 -0.46429,-0.09529 -0.63251,-0.26702l-2.68375,-2.74172c-0.3495,-0.35835 -0.3495,-0.93508 0,-1.29244c0.34939,-0.35636 0.91553,-0.35636 1.26492,0l1.99104,2.03395v0l3.84613,-4.71511c0.31586,-0.38714 0.88017,-0.43975 1.25977,-0.11713c0.3796,0.32361 0.43064,0.89835 0.11444,1.28847l-4.47292,5.48244c-0.16079,0.19754 -0.39528,0.31566 -0.64648,0.32758c-0.0135,0.00099 -0.02712,0.00099 -0.04063,0.00099z' fill='%23e9be32' fill-opacity='1'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+		--alert: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='SVGDoc' width='21' height='21' xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:avocode='https://avocode.com/' viewBox='0 0 21 21'%3E%3Cdefs%3E%3C/defs%3E%3Cdesc%3EGenerated with Avocode.%3C/desc%3E%3Cg%3E%3Cg%3E%3Ctitle%3EФигура 709 1%3C/title%3E%3Cpath d='M11.51394,20.77544h-2.27818c-4.95472,0 -8.9859,-4.03118 -8.9859,-8.98651v-2.27616c0,-4.95534 4.03118,-8.98651 8.9859,-8.98651h2.27818c4.95472,0 8.9859,4.03118 8.9859,8.98651v2.27616c0,4.95534 -4.03118,8.98651 -8.9859,8.98651zM18.47481,9.51277c0,-3.83959 -3.12252,-6.96149 -6.96087,-6.96149h-2.27818c-3.83835,0 -6.96098,3.1219 -6.96098,6.96149v2.27616c0,3.83959 3.12263,6.96249 6.96098,6.96249h2.27818c3.83835,0 6.96087,-3.1229 6.96087,-6.96249zM10.37479,15.71289c-0.55916,0 -1.01246,-0.45265 -1.01246,-1.01251c0,-0.55887 0.4533,-1.01251 1.01246,-1.01251c0.55927,0 1.01257,0.45364 1.01257,1.01251c0,0.55986 -0.4533,1.01251 -1.01257,1.01251zM10.37479,11.66385c-0.55904,0 -1.01246,-0.45364 -1.01246,-1.0135v-4.04904c0,-0.56085 0.45341,-1.01251 1.01246,-1.01251c0.55916,0 1.01257,0.45166 1.01257,1.01251v4.04904c0,0.55986 -0.45341,1.0135 -1.01257,1.0135z' fill='%23e9be32' fill-opacity='1'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+//
+@include media-breakpoint-between(md, xl) {}
+
+
+//
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+//
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+

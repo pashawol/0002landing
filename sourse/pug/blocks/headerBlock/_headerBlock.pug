@@ -1,0 +1,25 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-7
+					h1 
+						strong SEO-продвижение
+						span  в&nbsp;конкурентных тематиках  
+							| с&nbsp;экономией до&nbsp;10&nbsp;раз по  
+							| сравнению с&nbsp;другой рекламой
+					+e.foot
+						p Рассчитайте стоимость и&nbsp;#[strong получите подарок] &laquo;15&nbsp;признаков, что вам пытаются продать некачественное SEO-продвижение&raquo;
+							+pic('list.png','',0).list.d-none.d-lg-block
+						+e.btn(href="#") рассчитать стоимость seo и получить подарок
+				.col
+					+e.man-wrap
+						+pic("man.png")
+						+e.UL.list
+							li Ежедневные понятные  отчёты о&nbsp;работах
+							li Ни&nbsp;один наш клиент  не&nbsp;ушёл от&nbsp;нас за  последние 1,5 года
+						+e.about
+							+e.name Кудрявцев Сергей
+							+e.prof Руководитель компании
+	// end headerBlock

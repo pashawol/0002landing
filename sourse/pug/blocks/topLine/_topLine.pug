@@ -1,0 +1,26 @@
+mixin topLine()
+	// start topLine
+	+b.topLine.section#topLine&attributes(attributes)
+		.container
+			.row
+				.col-lg-auto.col
+					a(href="/")
+						img(src="img/@2x/logo.png", alt="")
+				.col.d-none.d-lg-block
+					+e.text.text-secondary Продвигаем сайты в самых конкурентных тематиках
+				.col-auto.d-none.d-lg-block
+					.strong.mb-2
+						a.text-body(href="mailto:info@newclients1.ru") info@newclients1.ru
+					.small.text-secondary Санкт-Петербург
+				+e.cont-item.col-auto 
+					.strong.mb-2
+						a.text-body(href="tel:+7(812)703-86-28") 
+							+icon("watsapp")
+							| +7 (812) 703-86-28
+					.small.text-secondary  Пн-Пт: c 09:00 до 20:00
+				.col-auto
+					+e.btn(href="#") Заказать звонок
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+	// end topLine

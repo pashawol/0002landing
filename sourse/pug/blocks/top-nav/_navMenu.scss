@@ -1,0 +1,29 @@
+.menu{
+	display: flex;
+	list-style: none;
+	@include media-breakpoint-up(xl){
+		--bs-gutter-x: 60px;
+	}
+	@include roww(40px);
+	position: relative;
+	margin-bottom: 0; 
+	li{
+		// margin-left: 0;
+		// margin-right: 0;
+		padding: 0;
+	}
+	a{
+		display: block;
+		text-align: center;
+		@include media-breakpoint-up(xl){
+		padding: rem(10) 30px;
+	}
+	padding: rem(10) 20px;
+
+		color: #282828; 
+		font-size: 11px;
+		font-weight: 500; 
+		text-transform: uppercase; 
+		letter-spacing: 0.73px; 
+	}
+}
