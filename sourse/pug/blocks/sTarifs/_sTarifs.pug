@@ -1,9 +1,22 @@
 mixin sTarifs(data)
 	// start sTarifs
 	+b.SECTION.sTarifs.section#sTarifs&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sTarifs
-				
-			.row
+		+e.first
+			.container
+				+e.content
+					+pic("tarif.png",'',0)
+					+b.section-title
+						h2 Здесь должны быть тарифы, но&nbsp;мы&nbsp;против бездумного шаблонного подхода
+					p Ваша голова и&nbsp;так наверняка пухнет от&nbsp;попыток понять как не&nbsp;ошибиться при покупке SEO.
+
+					p Это нормально, ведь даже начинающему SEO-специалисту сложно понять каких действий будет достаточно для целей предпринимателя.
+
+					p Наши тарифы начинаются от&nbsp;26&nbsp;т.р.&nbsp;и&nbsp;мы&nbsp;будем рады помочь вам выбрать самый выгодный тариф под ваши цели.
+
+					h4 Пройдите тест, мы&nbsp;подберём для вас максимально подходящий тариф
+					.small + выведем окно важных для вас отличий тарифов с&nbsp;ценами
+				+e.btns
+					+e.btn.btn-gradient(href="#") Пройти тест и узнать какой тариф мне подходит
+					+e.btn.btn-dark(href="#")  Не хочу проходить тест - Показать тарифы
+				.small Прохождение теста ни к чему не обязывает
 	// end sTarifs
