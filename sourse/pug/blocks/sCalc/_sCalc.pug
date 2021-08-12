@@ -2,8 +2,25 @@ mixin sCalc(data)
 	// start sCalc
 	+b.SECTION.sCalc.section#sCalc&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCalc
-				
 			.row
+				.col-lg-6
+					+b.section-title
+						h2 Рассчитайте стоимость вашего проекта и&nbsp;получите аудит в&nbsp;рамках акции
+						p #[strong Аудит проведёт не робот], а лично наш ведущий SEO-специалист с опытом более 6 лет
+					.small Обычно аудит проводим только после заключения договора, но&nbsp;сейчас мы&nbsp;готовы взять несколько новых клиентов и&nbsp;даём его бесплатно в&nbsp;рамках акции
+					+e.btn(href="#") Отправить ссылку на сайт и получить аудит по акции
+				+e.col.col-lg-6.align-self-end
+					+e.block
+						.strong Аудит включает в себя:
+						ul
+							li 
+								.strong Чек-лист по сайту  
+								| (100 параметров в формате есть/нет)
+							li #[strong Анализ конкурентов] (5-10)
+							li #[strong Сам аудит] (выводы в формате Word 
+							li как именно будет продвигаться сайт)
+					+pic('list-calc.png','',0).list-img
+					+pic('text.png').text-img
+
+
 	// end sCalc
