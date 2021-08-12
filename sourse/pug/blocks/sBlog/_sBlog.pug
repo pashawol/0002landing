@@ -2,8 +2,16 @@ mixin sBlog(data)
 	// start sBlog
 	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sBlog
-				
-			.row
+			.block-panel.block-panel--left
+				+b.section-title
+					h2 Мы&nbsp;ведём видео-блог и&nbsp;именно эти 2&nbsp;видео клиенты выделяют как самые полезные
+				.row
+					mixin video(i)
+						.col-md-6.col-12
+							+e.item.bg-wrap(data-fancybox='' href='https://www.youtube.com/watch?v=_sI_Ps7JSEk')
+								+pic(i,'bg',0).picture-bg
+								+e.play
+									+icon('play')
+					+video('video-1')
+					+video('video-2')
 	// end sBlog
