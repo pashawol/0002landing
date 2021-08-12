@@ -2,8 +2,15 @@ mixin sGoTest(data)
 	// start sGoTest
 	+b.SECTION.sGoTest.section#sGoTest&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sGoTest
-				
 			.row
+				.col-lg-6
+					+e.content
+						+b.section-title
+							h2 Пройдите тест, чтобы рассчитать стоимость SEO&dash;продвижения и получить #[span.text-primary 2&nbsp;подарка #[img(src="img/@2x/go-test-2.png", alt="")]]
+							p Это аудит от нашего ведущего SEO&dash;специалиста и пособие по выбору подрядчика по SEO
+						+e.btn(href="#") Рассчитать стоимость и забрать подарки
+				.col-lg-6.d-flex
+					+e.img-wrap
+						+pic(`go-test-1.png`,'',0)
+
 	// end sGoTest
