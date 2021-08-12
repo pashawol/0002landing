@@ -1,9 +1,105 @@
 // start .sSeeForYourself
 .sSeeForYourself {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT: 0;
+		--sPB: 0; 
+		background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, $primary 100%);
+		margin-top: -2px;
 		// --sTPB: ;
+		h2{
+		}
+		@include media-breakpoint-up(lg) {
 
+			.section-title{
+				max-width: 550px;
+				
+			}
+		}
+	.tabs{
+		&__caption{
+			// @extend .row
+			display: flex;
+			flex-wrap: wrap;
+				@include media-breakpoint-up(lg) {
+					max-width: rem(380);
+				}
+				margin-bottom: 30px;
+				@include roww(13px, m);
+				position: relative;
+				&::after{
+					content: var(--arrow);
+					position: absolute;
+					@include media-breakpoint-up(lg) {
+						transform: rotateX(180deg);
+						right: 0;
+						bottom: rem(40);
+					}
+					bottom: rem(-20);
+					transform: rotate(60deg);
+					right: -30px;
+
+			}
+
+		}
+		&__btn{
+			width: 61px;
+			height: 61px;
+			border-radius: $border-radius;
+			border: 1px solid rgba($secondary,.3);
+			color: $secondary;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 15px;
+			font-weight: 300;
+			font-size: 21px;
+			@include mt;
+			&:hover{
+
+				box-shadow: 6px 3px $small 3px rgba(233, 199, 49, 0.2); 
+				border-color: transparent;
+			}
+ 
+			&.active{
+				border-color: transparent;
+				color: #6a533e;
+				font-weight: 400;
+				box-shadow: 6px 3px $small 3px rgba(233, 199, 49, 0.2);  
+				background-image: linear-gradient(to top, #e9b731 0%, #e9cd31 100%);
+			}
+		}
+	}
+
+	.tabs__wrap{
+		border-radius: $border-radius;
+		background-color: #f6f7fa;
+		padding: rem(45) rem(50);
+		position: relative;
+		&::before{
+			content: url(../img/@2x/webp/woman.webp);
+			position: absolute;
+			bottom: -20px;
+			right: calc(100% - 20px);
+		}
+		h4{
+			font-weight: bold;
+			margin-bottom: 1em;
+		}
+				li {
+					list-style: none; 
+					margin-left: auto;
+					font-size: 14px;
+					margin-bottom: 1em;
+					position: relative;
+					font-weight: 300;
+					padding-left: rem(20);
+					&::before {
+						content: var(--check-b);
+						position: absolute; 
+						top: 0; 
+						left: 0;
+					}
+	}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
