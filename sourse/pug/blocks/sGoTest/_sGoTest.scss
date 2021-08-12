@@ -1,8 +1,10 @@
 // start .sGoTest
 .sGoTest {
-	--sPT: #{rem(40)};
-	--sPB: #{rem(55)};
 	--sTPB: 0;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(55)};
+	}
 	position: relative;
 	overflow: hidden;
 	background-color: $body-color;
@@ -10,12 +12,10 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		// align-items: center;
 		height: 100%;
 		padding-bottom: rem(40);
 		@include media-breakpoint-up(lg) {
 			padding-bottom: 0;
-			align-items: flex-start;
 		}
 	}
 	.section-title {
@@ -49,7 +49,7 @@
 					right: auto;
 					bottom: auto;
 					@include media-breakpoint-up(sm) {
-					width: rem(70);
+						width: rem(70);
 					}
 					@include media-breakpoint-up(xl) {
 						bottom: 0;
