@@ -16,9 +16,9 @@ mixin topLine()
 					.strong.mb-2
 						a.text-body(href="tel:+7(812)703-86-28") 
 							+icon("watsapp")
-							| +7 (812) 703-86-28
-					.small.text-secondary  Пн-Пт: c 09:00 до 20:00
-				.col-auto
+							span.d-none.d-md-inline +7 (812) 703-86-28
+					.small.text-secondary.d-none.d-md-block  Пн-Пт: c 09:00 до 20:00
+				.col-auto.d-none.d-sm-block
 					+e.btn(href="#") Заказать звонок
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js

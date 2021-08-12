@@ -13,6 +13,18 @@ mixin mob-mnu()
 			span
 		+e.inner
 			+mnu()
+			+b.topLine.p-3
+				.mb-4
+					.strong.mb-2
+							a.text-body(href="mailto:info@newclients1.ru") info@newclients1.ru
+					.small.text-secondary Санкт-Петербург
+
+				.strong.mb-2
+					a.text-body(href="tel:+7(812)703-86-28") 
+						+icon("watsapp")
+						| +7 (812) 703-86-28
+				.small.text-secondary  Пн-Пт: c 09:00 до 20:00
+				+e.btn(href="#") Заказать звонок
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -20,6 +32,7 @@ mixin top-nav()
 		.container
 			.row
 				.col
+					
 					+mnu()
 					
 	// end top-nav

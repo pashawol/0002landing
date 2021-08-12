@@ -3,7 +3,9 @@
 	background-color: $primary;
 	position: relative;
 	z-index: 6;
+	@include media-breakpoint-up(md) {
 		--sPT: 0;
+	}
 		--sPB: 0;
 		// --sTPB: ;
 		.row{
@@ -29,7 +31,17 @@
 	}
 	picture{
 		position: relative;
-		margin-top: rem(-72);
+		@include media-breakpoint-up(md) {
+			margin-right: 0;
+		}
+		@include media-breakpoint-up(sm) {
+
+			margin-top: rem(-72);
+			margin-right: -100px;
+			margin-left: 0;
+		}
+		// margin-left: -30px;
+		// margin-right: -50px;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -18,7 +18,7 @@ const JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
 	modalCall() {
-		const link = "[data-fancybox]";
+		const link = ".link-modal-js";
 
 		Fancybox.bind(link, {
 			arrows: false,
@@ -282,10 +282,10 @@ const $ = jQuery;
 
 function eventHandler() {
 	// JSCCommon.ifie();
-	// JSCCommon.modalCall();
+	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('.tabs--js');
-	// JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.mobileMenu();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
@@ -308,8 +308,13 @@ function eventHandler() {
 			: topNav.classList.remove('fixed');
 	}
 
+	function baW() {
+		$(".before-after picture").width($(".before-after").width());
+	}
+
 	function whenResize() {
 		setFixedNav();
+		baW();
 	}
 
 	window.addEventListener('scroll', () => {
@@ -323,41 +328,53 @@ function eventHandler() {
 	whenResize();
 
 
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
-	}
+	// let defaultSl = {
+	// 	spaceBetween: 0,
+	// 	lazy: {
+	// 		loadPrevNext: true,
+	// 	},
+	// 	watchOverflow: true,
+	// 	spaceBetween: 0,
+	// 	loop: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: ' .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: true,
+	// 		// renderBullet: function (index, className) {
+	// 		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+	// 		// }
+	// 	},
+	// }
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
+const sCases = new Swiper('.sCases__slider--js', {
 		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
+		// ...defaultSl,
+		slidesPerView: 1,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
 	});
 	// modal window
 
+
+$(".sCases__slide").each(function(){
+	let th = $(this);
+	th.find(".slider-ba").on("input change", (e) => {
+		const sliderPos = e.target.value;
+		// Update the width of the foreground image
+		th.find('.foreground-img').css('width', `${sliderPos}%`)
+		// Update the position of the slider button
+		th.find('.slider-button').css('left', `calc(${sliderPos}% - 18px)`);
+
+	});
+});
+
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

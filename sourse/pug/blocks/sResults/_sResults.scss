@@ -1,9 +1,50 @@
 // start .sResults
 .sResults {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+		--sPT: 0;
+		--sPB: 0;
+		--sTPB: 20px;
 
+		background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, $primary 100%);
+		&__content{
+			margin-left: auto;
+			max-width: rem(572);
+		}
+		.section-title{
+			
+		}
+		.block-panel{
+		padding-bottom: rem(90);
+		// overflow: hidden;
+		z-index: 2;
+		picture{
+				@include media-breakpoint-down(lg){
+					opacity: 0.35;
+				}
+			width: 60%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			z-index: -1;
+			border-radius: 60px 0 0 60px;overflow: hidden;
+		}
+	}
+	li {
+		list-style: none;
+		max-width: rem(540);
+		margin-left: auto;
+		// font-size: 14px;
+		margin-bottom: 1.4em;
+		position: relative;
+
+		&::before {
+			content: var(--check);
+			position: absolute;
+			right: 100%;
+			top: 0;
+			margin-right: rem(14);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

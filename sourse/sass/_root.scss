@@ -14,19 +14,24 @@
 	--sPB: #{rem(90 * .5)};
 	--sTPB: #{rem(40 * .5)};
 
+	
+	--swiperArrowSize: #{rem(62)};
 
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		@include media-breakpoint-up(xl) {
+		--swiperArrowPosition: 67px;
+		}
+	--swiperArrowPosition: 0;
+
 		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
+		--swiperColorDef: #{$body-color};
 		--swiperBgDef: #ffffff;
 	
 		--swiperBorderColorDefHover: var(--bs-primary);
-		--swiperColorDefHover: var(--bs-primary);
-		--swiperBgDefHover: #ffffff;
+		--swiperColorDefHover: #fff;
+		--swiperBgDefHover: #e9bd31;
 
 
-	--fancybox-bg: rgba(24, 24, 27/ .77);
+	--fancybox-bg: rgba(24, 24, 27, .77);
 
 
 

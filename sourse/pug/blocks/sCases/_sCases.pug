@@ -3,7 +3,43 @@ mixin sCases(data)
 	+b.SECTION.sCases.section#sCases&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sCases
-				
+				h2 Мы&nbsp;не&nbsp;просто приводим трафик на&nbsp;ваш сайт,  а&nbsp;делаем так, чтобы были заявки 
+				p Может&nbsp;ли быть такое, что сайт висит в&nbsp;ТОП-1, а&nbsp;телефон компании молчит? Да, если сайт не&nbsp;продающий и&nbsp;хуже, чем у&nbsp;конкурентов.   #[strong Вместе с&nbsp;SEO мы&nbsp;берём на&nbsp;себя модернизацию вашего сайта и&nbsp;вот, что это вам даёт]
 			.row
+				mixin card(i,t)
+					+e.col.col-md-4
+						+e.card
+							img(src=`img/svg/card-${i}.svg`, loading="lazy" alt="")
+							p!= t
+				+card(`1`,`Не&nbsp;нужно отдельно платить дизайнеру, программисту, верстальщику и&nbsp;аналитику, мы&nbsp;всё берём на&nbsp;себя`)
+				+card(`2`,`Ваш сайт легче и&nbsp;быстрее продвигается в&nbsp;SEO, так как он&nbsp;нравится людям`)
+				+card(`3`,`Улучшения на&nbsp;сайте увеличивают эффективность вообще всей рекламы, которая ведёт на&nbsp;сайт`)
+			p.fw-500.pt-4.pb-4
+				img(src="img/svg/alert.svg", alt="").me-2
+				| Мы не вносим изменения бездумно. Анализируем сайт, выясняем где у него пробелы, согласуем с вами. Если сайт уже хорош, мы не будем его менять
+			+e.slider-wrap
+				+e.arrow-text--left 
+					img(src="img/svg/arrow-to-right.svg", alt="")
+					| Сайт до заказа  <br> SEO у нас
+				+e.arrow-text--right  
+					img(src="img/svg/arrow-to-left.svg", alt="")
+					| Сайт, который  <br> у нас в работе
+				
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						- for (var x = 0; x < 3; x++)
+							+e.slide.swiper-slide
+								+b.before-after.swiper-no-swiping
+									+e.item( class='img background-img').bg-wrap
+										+pic("case-r.png",'bg').picture-bg
+									+e.item(class='img foreground-img').bg-wrap
+										+pic("case.png",'bg').picture-bg
+									<input type="range" min="1" max="100" value="50" class="slider-ba" name='slider'  >
+									.slider-button
+					+arrow
+			+e.btn(href="#") Рассчитать стоимость SEO с бесплатными доработками
+
+
+
+
 	// end sCases

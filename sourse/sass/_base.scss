@@ -119,7 +119,7 @@ body {
 	padding-bottom: var(--sPB);
 }
 h2{
-	font-weight: 900;
+	font-weight: 800;
 	@extend .mono;
 	line-height: 1.35;
 }
@@ -295,7 +295,7 @@ ul {
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
 	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	// border: 2px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
@@ -304,18 +304,25 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+	// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
+	text-align: center;
+	line-height: var(--swiperArrowSize);
+	vertical-align: middle;
+	&.swiper-button-disabled{
+		opacity: 0.4;
+		pointer-events: none;
+	}
 
 	&:hover {
 		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
+		// border-color: var(--swiperBorderColorDefHover);
 		color: var(--swiperColorDefHover);
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(16);
 	}
 
 	&::after {
