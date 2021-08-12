@@ -14,7 +14,11 @@
 				
 			}
 		}
+		.block-panel{
+			padding-bottom: rem(75);
+		}
 	.tabs{
+	
 		&__caption{
 			// @extend .row
 			display: flex;
@@ -82,7 +86,7 @@
 		}
 		h4{
 			font-weight: bold;
-			margin-bottom: 1em;
+			// margin-bottom: 1em;
 		}
 				li {
 					list-style: none; 

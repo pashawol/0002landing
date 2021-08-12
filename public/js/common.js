@@ -341,6 +341,10 @@ function eventHandler() {
 			th.find('.slider-button').css('left', "calc(".concat(sliderPos, "% - 18px)"));
 		});
 	});
+	$(".sPositions__link-more--js").click(function (e) {
+		e.preventDefault();
+		$(this).next().slideToggle().toggleClass("active");
+	});
 }
 
 ;

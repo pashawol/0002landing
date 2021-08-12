@@ -2,8 +2,11 @@ mixin sTest(data)
 	// start sTest
 	+b.SECTION.sTest.section#sTest&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sTest
-				
-			.row
+			.block-panel.block-panel--right
+				+pic("test.png",'bg')
+				+e.content
+					.section-title
+						h2 Пройдите тест и&nbsp;получите прогноз результатов для вашей ниши
+						p Мы&nbsp;не&nbsp;работаем со&nbsp;всеми подряд и&nbsp;берём только  те&nbsp;проекты, где уверенны в&nbsp;результате
+					+e.btn(href="#") Пройти тест и получить честный прогноз результатов в моей нише
 	// end sTest

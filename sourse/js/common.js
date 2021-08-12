@@ -334,6 +334,10 @@ $(".sCases__slide").each(function(){
 	});
 });
 
+	$(".sPositions__link-more--js").click(function(e){
+		e.preventDefault();
+		$(this).next().slideToggle().toggleClass("active");
+	})
 	
 };
 if (document.readyState !== 'loading') {

@@ -19,7 +19,7 @@
 	&__logos{
 		@include media-breakpoint-up(xxl){
 			margin-top: 10px;
-			margin-bottom: 23px;
+			//margin-bottom: 23px;
 		}
 		.row>*{
 			margin-top: rem(30);
