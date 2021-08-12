@@ -1,8 +1,90 @@
 // start .sCalc
 .sCalc {
 		// --sPT: ;
-		// --sPB: ;
+		--sPB: 0;
 		// --sTPB: ;
+		position: relative;
+		overflow: hidden;
+
+		background-color: $primary;
+		h2{
+			color: #fff;
+			margin-bottom: rem(40);
+		}
+		.section-title{
+			p{
+				max-width: rem(370);
+				font-weight: 300;
+			}
+		}
+		.small{
+			color: #9f7d0e;
+			font-size: 14px;
+			margin-bottom: rem(46);
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-gradient;  
+			max-width: rem(482);
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+		&__block{
+			width: 100%;
+			@include media-breakpoint-up(md) {
+				max-width: 325px; 
+				padding: rem(25) rem(25) rem(15);
+			}
+			padding: rem(25) rem(15) rem(15);
+			max-width: 300px; 
+			border-radius: $border-radius;
+			background-color: #ffffff;
+			position: absolute;
+			left: 0;
+			top: rem(60);
+			left: 15px;
+			font-size: 14px;
+			z-index: 3;
+			li {
+				list-style: none;
+				// max-width: rem(153); 
+				font-size: 14px;
+				margin-bottom: .2em;
+				position: relative;
+				padding-left: rem(20);
+
+				&::before {
+					content: var(--check);
+					position: absolute;
+					left: 0;
+					top: 0;
+					margin-right: rem(14);
+				}
+			}
+		}
+
+		&__col{
+			position: relative;
+			margin-top: -30px;
+			.text-img{
+				position: absolute;
+				left: 70px;
+				bottom: rem(40);
+				img{
+					width: auto;
+					max-width: none;
+				}
+			}
+			.list-img{
+				position: relative;
+				z-index: 2;
+				img{
+					width: auto;
+					max-width: none;
+				}
+			}
+		}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
