@@ -1,9 +1,30 @@
 // start .sLogos
 .sLogos {
+	background-color: $primary;
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	h2{
+		text-align: center;
+		color:white;
+		line-height: 54px;
+	}
+	picture{
+		display: flex;
+		justify-content: center;
+		img{
+			border-radius: $border-radius;
+		}
+	}
+	&__logos{
+		@include media-breakpoint-up(xxl){
+			margin-top: 10px;
+			margin-bottom: 23px;
+		}
+		.row>*{
+			margin-top: rem(30);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
