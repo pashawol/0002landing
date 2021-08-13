@@ -1,43 +1,158 @@
 .footer {
-		
 	margin-top: auto;
+	background-color: #222222;
+	color: #888888;
+	padding-top: rem(40);
+	padding-bottom: rem(45);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(70);
+		padding-bottom: rem(74);
+	}
+	&__logo {
+		display: inline-block;
+		margin-bottom: rem(20);
+		margin-left: rem(5);
+	}
 
-// 
-@include media-breakpoint-up(xl) {}
+	.row {
+		--bs-gutter-y: #{rem(35)};
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-y: 0;
+		}
+	}
 
-@include media-breakpoint-up(lg) {}
+	.container {
+		// & > .row {
+		// 	@include media-breakpoint-up(xl) {
+		// 		--bs-gutter-x: #{rem(200)};
+		// 	}
+		// 	.row {
+		// 		@include media-breakpoint-up(xl) {
+		// 			--bs-gutter-x: #{rem(30)};
+		// 		}
+		// 	}
+		// }
+	}
+	ul {
+		list-style: none;
+		margin-bottom: 0;
 
-@include media-breakpoint-up(md) {}
+		li {
+			// line-height: math.div(24, 13);
+			a {
+				display: inline-block;
+				color: $white;
+				&:hover {
+					color: $primary;
+					// color: shift-color($primary, $link-shade-percentage);
+				}
+				// line-height: math.div(26, 16);
+			}
+			&.small {
+				margin-bottom: rem(4.5);
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			a.small {
+				// line-height: math.div(20, 13);
+				// margin-bottom: 2px;
+			}
+		}
+	}
+	&__adress {
+		line-height: math.div(24, 13);
+		margin-bottom: rem(12);
+		// @include media-breakpoint-only(lg) {
+		// 	margin-bottom: rem(5);
+		// }
+		@include media-breakpoint-up(xl) {
+			min-width: rem(250);
+		}
+	}
+	&__mail {
+		font-weight: bold;
+		margin-bottom: rem(20);
+		// @include media-breakpoint-only(lg) {
+		// 	margin-bottom: rem(5);
+		// }
+	}
+	&__tel {
+		font-weight: bold;
+		margin-right: rem(15);
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(34);
+		}
+	}
+	&__shedule {
+		margin-top: rem(25);
+		line-height: 1;
+	}
+	&__btn {
+		width: 100%;
+		max-width: rem(230);
+		text-transform: uppercase;
+		font-size: rem(11);
+		line-height: math.div(21, 11);
+		padding: rem(10.5);
+		border-width: 2px;
+		margin-top: rem(14);
+		color: $white;
+		&:hover {
+			background-color: transparent;
+			border-color: $success;
+			color: $white;
+		}
+	}
+	//
+	@include media-breakpoint-up(xl) {
+	}
 
-@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-up(md) {
+	}
 
+	@include media-breakpoint-up(sm) {
+	}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-up(xs) {
+	}
 
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
 
-// 
-@include media-breakpoint-only(xs) {}
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
-@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(md) {
+	}
 
-@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-only(xl) {
+	}
 
+	//
+	@include media-breakpoint-down(xl) {
+	}
 
-// 
-@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {
+	}
 
-@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {
+	}
 
-@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {
+	}
 
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(xs) {
+	}
 }
