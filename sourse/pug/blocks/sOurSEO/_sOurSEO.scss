@@ -1,9 +1,33 @@
 // start .sOurSEO
 .sOurSEO {
 		// --sPT: ;
-		// --sPB: ;
+		--sPB: 0;
 		// --sTPB: ;
-
+	background-color: $primary;
+	h2{
+		color: #fff;
+		max-width: rem(500);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+		}
+	}
+	li{
+		list-style: none;
+		margin-bottom: rem(25);
+		img{
+			width: rem(28);
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		position: relative;
+		padding-left: rem(57);
+		strong{
+			font-size: 21px;
+			display: block;
+			margin-bottom: rem(10);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -11,4 +35,9 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {
+		picture{
+			margin-bottom: 1rem;
+		}
+	}
 } // end.sOurSEO

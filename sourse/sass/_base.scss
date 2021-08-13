@@ -528,22 +528,37 @@ iframe {
 
 .btn-gradient{
 	box-shadow: 6px 3px $small 3px rgba(81, 173, 64, 0.2);
-	border-radius: 9px;
 	// background-color: $body-colot;
 	background-image: linear-gradient(to top, #4fad3f 0%, #70b946 100%);
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	height: rem(68);
-	text-transform: uppercase;
 	color: #fff !important;
-	letter-spacing: 0.8px;
-	font-size: 12px;
 	&:hover{ 
 		background-image: linear-gradient(to top, #70b946 0%, #4fad3f 100%);
 	}
 }
 
+.btn-dark,
+.btn-gradient {
+	border-radius: 9px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: rem(68);
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	font-size: 12px;
+
+}
+
+.btn-dark{
+	letter-spacing: 0.8px;
+	background-color: $body-color;
+	color: #fff;
+	&:hover{
+		background-color: #e9bd31;
+		color: $body-color;
+	}
+}
 
 .block-panel{
 	background-color: #fff;
