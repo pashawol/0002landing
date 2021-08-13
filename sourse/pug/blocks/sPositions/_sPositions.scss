@@ -3,8 +3,132 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	&__row{
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xl) {
+		--sp-x: #{rem(68)};
+	}
+	
+	@include media-breakpoint-up(sm) {
+		--sp-x: #{rem(28)};
+	}
+	--sp-x: #{rem(15)};
+
+		&__item{
+			border-radius: $border-radius;
+			background-color: #ffffff;
+			padding: rem(40) var(--sp-x) rem(60);
+			position: relative;
+			@include media-breakpoint-up(lg) {
+
+				min-height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+	}
+	&__title{
+		font-weight: bold;
+		
+		padding-top: rem(10);
+		margin-bottom: rem(15);
+		min-height: 1.2em;
+	}
+	p{
+		max-width: rem(340);
+		margin-bottom: rem(10);
+		span{
+			// border-radius: $border-radius;
+			font-size: 14px;
+			font-weight: 300;
+			padding: rem(3);
+			background-color: rgba($color: $primary, $alpha: .4); 
+		}
+	}
+	&__link-more{
+		margin-top: auto;
+		font-size: 11px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $body-color;
+
+	}
+	&__title-row{
+		font-size: 11px;
+		font-weight: 500;
+		margin-bottom: rem(15);
+		text-transform: uppercase;
+		padding-top: rem(16);
+	}
+	&__row-text{
+		margin-bottom: rem(10);
+	}
+	&__head{
+		padding-bottom: rem(24);
+		margin-bottom: rem(22);
+			border-bottom: 4px solid $primary; 
+			@include media-breakpoint-up(lg) {
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+			}
+	}
+	&__block{
+		width: 75px;
+		// height: 116px;
+		border-radius: $border-radius;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+		min-height: 100%;
+		&--before{
+			border: 2px solid #f7f3df;
+		}
+		&--after{
+			border: 2px solid #f7bf0e;
+		}
+	}
+	&__row{
+		margin-bottom: 20px;
+	}
+
+	&__hidden-block{
+		position: absolute;
+		left: 0;
+		top: calc(100% - #{rem(20)});
+		background-color: #fff;
+		width: 100%;
+		border-radius: $border-radius;
+		padding: rem(0) var(--sp-x) rem(40);
+		display: none;
+		z-index: 4;
+		box-shadow: 0  30px 40px 0 rgba($color: $secondary, $alpha: .08);
+	}
+	table{
+		width: 100%;
+		font-size: 14px;
+		.text-primary.tdu{
+			font-size: 1rem;
+		}
+		th{
+			color: $secondary;
+		}
+	}
+	&__btn-more{
+		@extend .btn;
+		@extend .btn-outline-secondary;
+		text-transform: uppercase;
+		opacity: 0.5;
+		width: 100%;
+		padding: rem(20);
+		margin-top: rem(30);
+		font-weight: 500;
+		font-size: 12px;
+	}
+	@include media-breakpoint-up(xl) {
+		--sPB: 110px;
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}

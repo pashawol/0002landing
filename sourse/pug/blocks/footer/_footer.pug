@@ -1,18 +1,43 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
+			+e.logo(href="/")
+				img(src="img/@2x/footer-logo.png" alt="")
 			.row
+				.col-lg-3.col-sm-6
+					ul
+						li.small © 2016-2021 WEB студия 
+						li.small Новые клиенты
+						li.small #[a(href="#") Карта сайта]
+						li.small #[a(href="#") Политика конфиденциальности] 
+						li.small ИНН: 780617131500
+						li.small ОГРН: 317784700165748
+				.col
+					ul
+						li.small #[a(href="#") Продвижение сайтов]
+						li.small #[a(href="#") Создание сайтов]
+						li.small #[a(href="#") Поддержка сайтов]
+						li.small #[a(href="#") Контекстная реклама Yandex]
+						li.small #[a(href="#") Контекстная реклама Google]
+						li.small #[a(href="#") Самостоятельно]
+				.col-lg-auto.col-sm-6
+					ul
+						li
+							+e.mail(href="mailto:info@newclients1.ru") info@newclients1.ru
+						li
+							+e.adress.small Санкт-Петербург, Пискаревский <br> пр., д. 25 Лит. А оф. 1101-2 (11 этаж)
+					+soc
+				.col-sm-auto
+					ul
+						li
+							+e.tel(href="tel:+78127038628") +7 (812) 703-86-28
+							span.small СПб
+						li
+							+e.tel(href="tel:+79119138573") +7 (911) 913-85-73 
+							span.small Регионы
+						li
+							+e.shedule.small Пн-Пт: c 09:00 до 20:00
+					+e.btn.btn.btn-outline-secondary Заказать звонок
 
-			.row
-				.col-md-6
-					.row
-						.col-sm-6
-							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odio? Provident asperiores pariatur odio tempora fugiat voluptatem perspiciatis, corporis reprehenderit velit qui dolorum rem vero officiis alias voluptatibus, ullam blanditiis?
-						.col-sm-6
-							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odio? Provident asperiores pariatur odio tempora fugiat voluptatem perspiciatis, corporis reprehenderit velit qui dolorum rem vero officiis alias voluptatibus, ullam blanditiis?
-				.col-md-6
-					.row
-						.col-sm-6
-							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odio? Provident asperiores pariatur odio tempora fugiat voluptatem perspiciatis, corporis reprehenderit velit qui dolorum rem vero officiis alias voluptatibus, ullam blanditiis?
-						.col-sm-6
-							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odio? Provident asperiores pariatur odio tempora fugiat voluptatem perspiciatis, corporis reprehenderit velit qui dolorum rem vero officiis alias voluptatibus, ullam blanditiis?
+
+
