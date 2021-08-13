@@ -2,9 +2,49 @@
 .sTarifs {
 		// --sPT: ;
 		// --sPB: ;
-		// --sTPB: ;
+		--sTPB: 20px;
 
-	@include media-breakpoint-up(xl) {}
+		&__btn{
+			height: rem(69);
+			padding-left: rem(46);
+			padding-right: rem(46);
+			margin-top: 1em;
+		}
+		
+		&__content{
+			max-width: rem(600);
+			position: relative;
+			z-index: 2;
+			p{
+				margin-bottom: rem(25);
+			}
+		picture{
+			z-index: -1;
+			position: absolute;
+			left: 100%;
+			top: 0;
+			img{
+				// width: auto;
+				max-width: none;
+			}
+		}
+	}
+	&__btns{
+		position: relative;
+		z-index: 4;
+	}
+	&__btn{
+		@include media-breakpoint-up(lg) {
+
+			margin-top: rem(30);
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(15);
+	}
+	@include media-breakpoint-up(xl) {
+		--sPT: 100px;
+		--sPB:  110px;
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}

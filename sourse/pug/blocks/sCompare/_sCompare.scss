@@ -1,9 +1,76 @@
 // start .sCompare
 .sCompare {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT: 0 ;
+		--sPB: 0;
 		// --sTPB: ;
+	background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, $primary 100%);
+	.block-panel{
+		padding-top: rem(90);
+	}
+	&__head{
+		border-bottom:3px solid $primary;
+		padding-bottom: rem(20);
+		color: #888888;
+		@extend .mono;
+		@include media-breakpoint-up(sm) {
 
+			font-size: $h4-font-size;
+		}
+		font-weight: bold;
+		.row{
+			align-items: center;
+		}
+	}
+	&__label{
+		border-radius: $border-radius;
+		background-color: $primary;
+		display: inline-flex;
+		color: $body-color;
+		align-items: center;
+		line-height: 1;
+		@include media-breakpoint-up(sm) {
+
+			padding: rem(0) rem(18);
+		}
+		padding: rem(0) rem(10);
+		img{
+			margin-left: rem(20);
+			margin-top: rem(-10);
+			margin-bottom: rem(-5);
+		}
+	}
+
+	&__item{
+		font-size: 14px;
+		&:not(:last-child) {
+			border-bottom: 1px solid rgba($color: #666666, $alpha: .21);
+		}
+		padding-top: rem(18);
+		padding-bottom: rem(19);
+		position: relative;
+		z-index: 2;
+		&::before{
+			content: '';
+			@include a-cent1(x);
+			z-index: -1;
+			width: calc(100% + #{rem(62)});
+			background-color: #e9bd31;
+			opacity: 0;
+			@include mt;
+			height: 100%;
+			pointer-events: none;
+			top: 0;
+			border-radius: $border-radius;
+		}
+		&:hover{
+			border-color: transparent;
+		}
+		&:hover::before{
+			
+			opacity: 0.4;
+		}
+	}
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
