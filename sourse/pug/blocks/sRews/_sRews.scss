@@ -3,7 +3,88 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	&__btn{
+		@extend .btn;
+		@extend .btn-gradient;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		max-width: rem(499);
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.section-title{
+		padding-bottom: 0;
+	}
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, $primary 100%);
+	&__caption{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: rem(286);
+		@include media-breakpoint-down(lg){
+			max-width: rem(511);
+			margin-bottom: rem(30);
+		}
+		.caption-title{
+			text-transform: uppercase;
+			font-size: rem(12);
+			color:$secondary;
+			font-weight: 600;
+			line-height: rem(21);
+		}
+		.caption-main-text{
+			padding-top: rem(26);
+			font-size: rem(14);
+			span{
+				background-color: rgba(233, 190, 50, 0.4);
+				border-radius: $border-radius;
+			}
+		}
+		.caption-footer{
+			font-style: italic;
+			font-size: rem(14);
+			color: #888888;
+			font-weight: 500;
+			line-height: 24px;
+		}
+		.caption-marks{
+			font-size: rem(72);
+			color: $primary;
+			opacity: 0.4;
+		}
+	}
+	.cap-2{
+		display: flex;
+		align-items: flex-end;
+    justify-content: space-between;
+	}
+	&__row-feedback{
+		&:last-child{
+			border-bottom:0px solid black;
+		}
+		border-bottom: 1px solid rgba(102, 102, 102, 0.21);
+		padding-top: rem(42);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(42);
+		}
+		.video-item{
+			@include media-breakpoint-up(lg){
+				margin-right: none;
+				margin-left: none;
+			}
+			max-width: rem(511);
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.row-caption{
+			@include media-breakpoint-down(lg){
+				padding-top: rem(20);
+				justify-content: center;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -11,4 +92,28 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	// .swiper-container {
+	// 	width: 100%;
+	// 	height: 100%;
+	// }
+
+	// .swiper-slide {
+	// 	text-align: center;
+	// 	font-size: 18px;
+	// 	background: #fff;
+
+	// 	/* Center slide text vertically */
+	// 	display: -webkit-box;
+	// 	display: -ms-flexbox;
+	// 	display: -webkit-flex;
+	// 	display: flex;
+	// 	-webkit-box-pack: center;
+	// 	-ms-flex-pack: center;
+	// 	-webkit-justify-content: center;
+	// 	justify-content: center;
+	// 	-webkit-box-align: center;
+	// 	-ms-flex-align: center;
+	// 	-webkit-align-items: center;
+	// 	align-items: center;
+	// }
 } // end.sRews

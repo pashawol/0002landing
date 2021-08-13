@@ -34,3 +34,27 @@
 	}
 }
 
+.video-item{
+	@include block(570,319);
+	@include media-breakpoint-down(md){
+		margin-top: 20px;
+	}
+	&__play{
+		@include a-cent1;
+		width: rem(88);
+		height: rem(88);
+		padding-left: rem(6);
+		border-radius: 50%;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media-breakpoint-between(md,xl){
+			width: rem(60);
+			height: rem(60);
+		}
+		svg{
+			font-size: 23px;
+		}
+	}
+}
