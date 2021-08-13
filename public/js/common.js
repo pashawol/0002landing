@@ -331,6 +331,24 @@ function eventHandler() {
 		}
 	}); // modal window
 
+	const sRews = new Swiper(".sRews__slider--js", {
+		slidesPerView: 2,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev"
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 40
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			}
+		}
+	});
 	$(".sCases__slide").each(function () {
 		let th = $(this);
 		th.find(".slider-ba").on("input change", e => {
