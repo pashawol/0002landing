@@ -3,22 +3,45 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	// --swiperArrowPosition: -95px;
+	// @include media-breakpoint-up(xxl){
+	// 	--swiperArrowPosition: -95px;
+	// }
+	--swiperArrowPosition: -95px;
+	@include media-breakpoint-down(xl){
+		--swiperArrowPosition: -25px;
+	}
+	&__slider-wrap{
+		position: relative;
+		@include media-breakpoint-down(xl){
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.swiper-button-hand-prev{
+		background-color: rgba(0,0,0,0);
+		opacity: 1;
+		&:hover{
+			color: $body-color;
+			background-color:rgba(0,0,0,0.05);
+		}
+	}
+	.swiper-button-hand-next{
+		background-color: rgba(0,0,0,0);
+		opacity: 1;
+		&:hover{
+			color: $body-color;
+			background-color:rgba(0,0,0,0.05);
+		}
+	}
 	&__slider{
 		// padding-top: 8px;
 		// padding-bottom: 8px;
 		// padding-left: 50px;
 		// padding-right: 30px;
 		padding: 8px;
-		.swiper-button-hand-prev{
-			background-color: rgba(0,0,0,0);
-			opacity: 1;
-			left:-10px;
-		}
-		.swiper-button-hand-next{
-			background-color: rgba(0,0,0,0);
-			opacity: 1;
-			right: -10px;
-		}
 	}
 	.swiper-slide{
 		@include media-breakpoint-up(xl){
@@ -29,7 +52,7 @@
 				max-width: 240px;
 			}
 			border-radius: $border-radius;
-			box-shadow: 0 0 15px rgba(51,51,51,0.1);
+			box-shadow: 4px 2px 15px 6px rgba(168,176,198,0.13);
 		}
 	}
 	&__btn{
@@ -122,28 +145,15 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-	// .swiper-container {
-	// 	width: 100%;
-	// 	height: 100%;
-	// }
-
-	// .swiper-slide {
-	// 	text-align: center;
-	// 	font-size: 18px;
-	// 	background: #fff;
-
-	// 	/* Center slide text vertically */
-	// 	display: -webkit-box;
-	// 	display: -ms-flexbox;
-	// 	display: -webkit-flex;
-	// 	display: flex;
-	// 	-webkit-box-pack: center;
-	// 	-ms-flex-pack: center;
-	// 	-webkit-justify-content: center;
-	// 	justify-content: center;
-	// 	-webkit-box-align: center;
-	// 	-ms-flex-align: center;
-	// 	-webkit-align-items: center;
-	// 	align-items: center;
-	// }
 } // end.sRews
+
+@media screen and (max-width: 1400px) {
+	.sRews{
+		&__slider-wrap{
+			position: relative;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		--swiperArrowPosition: -20px;
+	}
+}
