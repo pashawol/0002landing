@@ -2,7 +2,7 @@
 .sQuestions {
 	margin-top: -5px;
 	position: relative;
-	z-index: 4;
+	// z-index: 4;
 	// background: linear-gradient(to bottom, $primary 0%, rgba(var(--bs-primary-rgb) / 0) 100%);
 // background: -webkit-linear-gradient(top, rgba(var(--bs-primary-rgb) / 0) 0%, $primary 100%);
 	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, $primary 100%);
@@ -22,6 +22,17 @@
 			margin-left: -15px;
 		}
 		.block-panel{
+			position: relative;
+			&::after{
+				content: '';
+				height: 60px;
+				width: 40%;
+				left: 30%;
+				background-color: #fff;
+				z-index: 45;
+				position: absolute;
+				top: 0;
+			}
 				@include media-breakpoint-up(xl){
 					padding-bottom: 0;
 				}

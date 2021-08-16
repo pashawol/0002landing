@@ -1,4 +1,4 @@
-mixin headerBlock()
+mixin headerBlock(b)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
@@ -15,11 +15,16 @@ mixin headerBlock()
 						+e.btn(href="#") рассчитать стоимость seo и получить подарок
 				.col
 					+e.man-wrap
-						+pic("man.png")
-						+e.UL.list.d-none.d-md-block
+						if b
+							+pic("header-img.png").picture-b
+						else
+							+pic("man.png")
+						
+						+e.UL.list.d-none.d-md-block(class=(b ? 'list-b' : null ))
 							li Ежедневные понятные  отчёты о&nbsp;работах
 							li Ни&nbsp;один наш клиент  не&nbsp;ушёл от&nbsp;нас за  последние 1,5 года
-						+e.about
-							+e.name Кудрявцев Сергей
-							+e.prof Руководитель компании
+						if !b
+							+e.about
+								+e.name Кудрявцев Сергей
+								+e.prof Руководитель компании
 	// end headerBlock
