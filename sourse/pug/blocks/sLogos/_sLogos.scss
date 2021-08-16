@@ -22,6 +22,11 @@
 		align-items: center;
 		border-radius: $border-radius;
 		background-color: #fff;
+		@include mt;
+		&:hover{
+			transform: translateY(-8px);
+			box-shadow: 6px 3px 0.8125rem 3px rgb(0 0 0 / 5%);
+		}
 	}
 	&__logos{
 		@include media-breakpoint-up(xxl){

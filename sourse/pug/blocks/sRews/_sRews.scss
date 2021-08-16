@@ -123,6 +123,11 @@
 			padding-bottom: rem(42);
 		}
 		.video-item{
+			@include mt;
+			border-radius: 16px;
+			&:hover {
+				box-shadow: 6px 3px 0.8125rem 3px rgb(0 0 0 / 5%);
+			}
 			@include media-breakpoint-up(lg){
 				margin-right: none;
 				margin-left: none;

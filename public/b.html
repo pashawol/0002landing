@@ -11,14 +11,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="main.jpg">
+	<body class="main-page">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
 					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">SEO продвижение</a></li>
+						<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">SEO продвижение</a>
+							<ul class="sub-menu">
+								<li><a href=""> Наименование услуги</a></li>
+								<li><a href=""> Наименование услуги</a></li>
+								<li><a href=""> Наименование услуги</a></li>
+							</ul>
+						</li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
@@ -31,7 +37,7 @@
 							<div class="strong mb-2"><a class="text-body" href="mailto:info@newclients1.ru">info@newclients1.ru</a></div>
 							<div class="small text-secondary">Санкт-Петербург</div>
 						</div>
-						<div class="strong mb-2"><a class="text-body" href="tel:+7(812)703-86-28"> 
+						<div class="tell strong mb-2"><a class="text-body" href="tel:+7(812)703-86-28"> 
 								<svg class="icon icon-watsapp ">
 									<use xlink:href="img/svg/sprite.svg#watsapp"></use>
 								</svg>+7 (812) 703-86-28</a></div>
@@ -55,7 +61,7 @@
 				<div class="topLine section" id="topLine">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-auto col"><a href="/"><img src="img/@2x/logo.png" alt=""/></a></div>
+							<div class="col-lg-auto col"><a href="/"><img class="res-i" src="img/@2x/logo.png" alt=""/></a></div>
 							<div class="col d-none d-lg-block">
 								<div class="topLine__text text-secondary">Продвигаем сайты в самых конкурентных тематиках
 								</div>
@@ -65,13 +71,13 @@
 								<div class="small text-secondary">Санкт-Петербург</div>
 							</div>
 							<div class="topLine__cont-item col-auto"> 
-								<div class="strong mb-2"><a class="text-body" href="tel:+7(812)703-86-28"> 
-										<svg class="icon icon-watsapp ">
-											<use xlink:href="img/svg/sprite.svg#watsapp"></use>
-										</svg><span class="d-none d-md-inline">+7 (812) 703-86-28</span></a></div>
+								<div class="strong mb-md-2"><a class="text-body" href="tel:+7(812)703-86-28"> <span class="d-none d-sm-inline"> 
+											<svg class="icon icon-watsapp ">
+												<use xlink:href="img/svg/sprite.svg#watsapp"></use>
+											</svg></span><span> +7 (812) 703-86-28</span></a></div>
 								<div class="small text-secondary d-none d-md-block"> Пн-Пт: c 09:00 до 20:00</div>
 							</div>
-							<div class="col-auto d-none d-sm-block">
+							<div class="col-auto d-none d-md-block">
 								<a class="topLine__btn" href="#">Заказать звонок
 								</a>
 							</div>
@@ -89,7 +95,13 @@
 						<div class="row">
 							<div class="col">
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">SEO продвижение</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">SEO продвижение</a>
+										<ul class="sub-menu">
+											<li><a href=""> Наименование услуги</a></li>
+											<li><a href=""> Наименование услуги</a></li>
+											<li><a href=""> Наименование услуги</a></li>
+										</ul>
+									</li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
@@ -260,7 +272,7 @@
 				<div class="container">
 					<div class="block-panel block-panel--left">
 						<div class="row">
-							<div class="sGaranties__col col-xl-6">
+							<div class="sGaranties__col col-lg-6">
 								<div class="section-title"> 
 									<h2>Гарантируем возврат при любых ваших сомнениях  в&nbsp;нашей компетенции </h2>
 								</div>
@@ -269,7 +281,7 @@
 								<a class="sGaranties__btn" href="#">Спрогнозировать когда будут первые клиенты с SEO
 								</a>
 							</div>
-							<div class="col align-self-end order-xl-first">
+							<div class="col align-self-end order-lg-first">
 								<div class="sGaranties__cotract">
 									<!-- picture-->
 									<picture> 
@@ -1338,10 +1350,161 @@
 						<div class="sTarifs__btns">
 							<a class="sTarifs__btn btn-gradient" href="#">Пройти тест и узнать какой тариф мне подходит
 							</a>
-							<a class="sTarifs__btn btn-dark" href="#"> Не хочу проходить тест - Показать тарифы
-							</a>
+							<button class="sTarifs__btn btn-dark" type="button"> Не хочу проходить тест - Показать тарифы
+							</button>
 						</div>
 						<div class="small">Прохождение теста ни к чему не обязывает</div>
+					</div>
+				</div>
+				<div class="sTarifs__second">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>Выберите удобный вам тариф  <br> или воспользуйтесь нашей помощью в&nbsp;подборе</h2>
+							<p> <strong>В&nbsp;тарифы уже включены все платежи и&nbsp;даже бюджет на&nbsp;продвижение </strong><br/> Если у&nbsp;вас ещё нет сайта, мы&nbsp;можем сделать его сами, стоимость не&nbsp;отражена в&nbsp;тарифах, просто пройдите тест</p>
+						</div>
+						<div class="row">
+									<div class="sTarifs__col col-lg-3 col-sm-6">
+										<div class="tarif-item">
+											<div class="tarif-item__panel">
+												<div class="tarif-item__head">
+													<div class="tarif-item__img-wrap">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/tarif-1.webp"/><img src="img/@2x/tarif-1.pnd" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+													</div>
+													<div class="tarif-item__title">Тариф “Команда”
+													</div>
+													<p>Для сайтов с&nbsp;каталогом до&nbsp;1000&nbsp;позиций, если у&nbsp;вас в&nbsp;штате есть свой программист</p>
+												</div>
+												<div class="tarif-item__body">
+													<ul>
+														<li>Неограниченное число поисковых запросов</li>
+														<li>Внутренняя оптимизация</li>
+														<li>Внешняя оптимизация</li>
+														<li>Написание контента</li>
+														<li>Визуальные доработки для сайта и&nbsp;расширение его структуры</li>
+														<li>Регистрация в&nbsp;каталогах</li>
+														<li>Подготовка макетов и&nbsp;баннеров</li>
+														<li>Подготовка планов и&nbsp;отчётов</li>
+														<li>Подготовка ТЗ&nbsp;для вашего программиста</li>
+													</ul>
+												</div>
+											</div>
+											<div class="tarif-item__price">от 26 т.р.
+											</div>
+											<a class="tarif-item__btn" href="#">Интересует тариф,  <br> узнать точную стоимость
+											</a>
+										</div>
+									</div>
+									<div class="sTarifs__col col-lg-3 col-sm-6">
+										<div class="tarif-item optim">
+											<div class="tarif-item__panel">
+												<div class="tarif-item__head">
+													<div class="tarif-item__img-wrap">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/tarif-2.webp"/><img src="img/@2x/tarif-2.pnd" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+													</div>
+													<div class="tarif-item__title">Тариф “Оптимум”
+													</div>
+													<p>Для сайтов с&nbsp;каталогом до&nbsp;1000&nbsp;позиций, все работы делаем&nbsp;мы</p>
+												</div>
+												<div class="tarif-item__body">
+													<ul>
+														<li>Всё то же самое что в тарифе "Команда" +</li>
+													</ul>
+													<ul class="ul2">
+														<li>Наш специалист добавляет контент</li>
+														<li>Техническая оптимизация</li>
+														<li>Аналитика</li>
+														<li>Техническая поддержка сайта</li>
+													</ul>
+												</div>
+											</div>
+											<div class="tarif-item__price">от 34 т.р.
+											</div>
+											<a class="tarif-item__btn" href="#">Интересует тариф,  <br> узнать точную стоимость
+											</a>
+										</div>
+									</div>
+									<div class="sTarifs__col col-lg-3 col-sm-6">
+										<div class="tarif-item">
+											<div class="tarif-item__panel">
+												<div class="tarif-item__head">
+													<div class="tarif-item__img-wrap">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/tarif-3.webp"/><img src="img/@2x/tarif-3.pnd" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+													</div>
+													<div class="tarif-item__title">Тариф “Мега”
+													</div>
+													<p>Для сайтов с&nbsp;каталогом от&nbsp;1000 позиций</p>
+												</div>
+												<div class="tarif-item__body">
+													<ul>
+														<li>Всё то же самое что в тарифе "Оптимум" +</li>
+													</ul>
+													<ul class="ul2">
+														<li>Техническая поддержка сайта</li>
+														<li>Доп. часы работы программиста</li>
+														<li>Доп. часы специалиста по&nbsp;контенту</li>
+														<li>Доп. часы аналитика</li>
+													</ul>
+												</div>
+											</div>
+											<div class="tarif-item__price">от 64 т.р.
+											</div>
+											<a class="tarif-item__btn" href="#">Интересует тариф,  <br> узнать точную стоимость
+											</a>
+										</div>
+									</div>
+									<div class="sTarifs__col col-lg-3 col-sm-6">
+										<div class="tarif-item">
+											<div class="tarif-item__panel">
+												<div class="tarif-item__head">
+													<div class="tarif-item__img-wrap">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/tarif-4.webp"/><img src="img/@2x/tarif-4.pnd" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+													</div>
+													<div class="tarif-item__title">Тариф &laquo;Больше, чем SEO&raquo;
+													</div>
+													<p>Берём на&nbsp;себя не&nbsp;только SEO, но&nbsp;и&nbsp;комплекс более широких задач интернет-маркетинга</p>
+												</div>
+												<div class="tarif-item__body">
+													<ul>
+														<li>Всё то же самое что в тарифе "Мега" +</li>
+													</ul>
+													<ul class="ul2">
+														<li>E-mail маркетинг</li>
+														<li>Коллтрекинг</li>
+														<li>Электронная коммерция</li>
+														<li>Общение напрямую с&nbsp;SEO специалистами</li>
+														<li>20&nbsp;тыс.&nbsp;на&nbsp;ведение контекстной рекламы Yandex и&nbsp;Google (включено)</li>
+														<li>Публикация постов в&nbsp;соц. сети</li>
+													</ul>
+												</div>
+											</div>
+											<div class="tarif-item__price">от 128 т.р.
+											</div>
+											<a class="tarif-item__btn" href="#">Интересует тариф,  <br> узнать точную стоимость
+											</a>
+										</div>
+									</div>
+						</div>
+						<div class="sTarifs__btns text-center">
+							<div class="h5">Пройдите тест, мы&nbsp;подберём для вас тариф или разработаем уникальный</div>
+							<a class="sTarifs__btn btn-gradient" href="#">Пройти тест и&nbsp;узнать какой тариф мне подходит 
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -1359,7 +1522,7 @@
 									<a class="video-item bg-wrap" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 										<!-- picture-->
 										<picture class="picture-bg"> 
-											<source type="image/webp" srcset="img/@2x/webp/rews-1.webp"/><img class="object-fit-js" src="img/@2x/rews-1.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/rews-1.webp"/><img class="object-fit-js" src="img/@2x/rews-1.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 										<div class="video-item__play">
@@ -1389,7 +1552,7 @@
 									<a class="video-item bg-wrap" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 										<!-- picture-->
 										<picture class="picture-bg"> 
-											<source type="image/webp" srcset="img/@2x/webp/rews-2.webp"/><img class="object-fit-js" src="img/@2x/rews-2.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/rews-2.webp"/><img class="object-fit-js" src="img/@2x/rews-2.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 										<div class="video-item__play">
@@ -1419,7 +1582,7 @@
 									<a class="video-item bg-wrap" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 										<!-- picture-->
 										<picture class="picture-bg"> 
-											<source type="image/webp" srcset="img/@2x/webp/rews-3.webp"/><img class="object-fit-js" src="img/@2x/rews-3.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/rews-3.webp"/><img class="object-fit-js" src="img/@2x/rews-3.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 										<div class="video-item__play">
@@ -1449,7 +1612,7 @@
 									<a class="video-item bg-wrap" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 										<!-- picture-->
 										<picture class="picture-bg"> 
-											<source type="image/webp" srcset="img/@2x/webp/rews-4.webp"/><img class="object-fit-js" src="img/@2x/rews-4.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/rews-4.webp"/><img class="object-fit-js" src="img/@2x/rews-4.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 										<div class="video-item__play">
@@ -1479,7 +1642,7 @@
 									<a class="video-item bg-wrap" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 										<!-- picture-->
 										<picture class="picture-bg"> 
-											<source type="image/webp" srcset="img/@2x/webp/rews-5.webp"/><img class="object-fit-js" src="img/@2x/rews-5.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/rews-5.webp"/><img class="object-fit-js" src="img/@2x/rews-5.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 										<div class="video-item__play">
@@ -1645,7 +1808,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-1.webp"/><img src="img/@2x/logos-1.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-1.webp"/><img src="img/@2x/logos-1.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1654,7 +1817,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-2.webp"/><img src="img/@2x/logos-2.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-2.webp"/><img src="img/@2x/logos-2.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1663,7 +1826,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-3.webp"/><img src="img/@2x/logos-3.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-3.webp"/><img src="img/@2x/logos-3.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1672,7 +1835,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-4.webp"/><img src="img/@2x/logos-4.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-4.webp"/><img src="img/@2x/logos-4.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1681,7 +1844,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-5.webp"/><img src="img/@2x/logos-5.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-5.webp"/><img src="img/@2x/logos-5.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1690,7 +1853,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-6.webp"/><img src="img/@2x/logos-6.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-6.webp"/><img src="img/@2x/logos-6.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1699,7 +1862,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-7.webp"/><img src="img/@2x/logos-7.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-7.webp"/><img src="img/@2x/logos-7.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1708,7 +1871,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-8.webp"/><img src="img/@2x/logos-8.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-8.webp"/><img src="img/@2x/logos-8.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1717,7 +1880,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-9.webp"/><img src="img/@2x/logos-9.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-9.webp"/><img src="img/@2x/logos-9.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1726,7 +1889,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-10.webp"/><img src="img/@2x/logos-10.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-10.webp"/><img src="img/@2x/logos-10.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1735,7 +1898,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-11.webp"/><img src="img/@2x/logos-11.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-11.webp"/><img src="img/@2x/logos-11.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1744,7 +1907,7 @@
 									<div class="sLogos__logo-wrap">
 										<!-- picture-->
 										<picture> 
-											<source type="image/webp" srcset="img/@2x/webp/logos-12.webp"/><img src="img/@2x/logos-12.jpg" alt="" loading="lazy"/>
+											<source type="image/webp" srcset="img/@2x/webp/logos-12.webp"/><img src="img/@2x/logos-12.png" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 									</div>
@@ -1766,7 +1929,7 @@
 								<a class="video-item bg-wrap" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 									<!-- picture-->
 									<picture class="picture-bg"> 
-										<source type="image/webp" srcset="img/@2x/webp/video-1.webp"/><img class="object-fit-js" src="img/@2x/video-1.jpg" alt="" loading="lazy"/>
+										<source type="image/webp" srcset="img/@2x/webp/video-1.webp"/><img class="object-fit-js" src="img/@2x/video-1.png" alt="" loading="lazy"/>
 									</picture>
 									<!-- /picture-->
 									<div class="video-item__play">
@@ -1780,7 +1943,7 @@
 								<a class="video-item bg-wrap" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
 									<!-- picture-->
 									<picture class="picture-bg"> 
-										<source type="image/webp" srcset="img/@2x/webp/video-2.webp"/><img class="object-fit-js" src="img/@2x/video-2.jpg" alt="" loading="lazy"/>
+										<source type="image/webp" srcset="img/@2x/webp/video-2.webp"/><img class="object-fit-js" src="img/@2x/video-2.png" alt="" loading="lazy"/>
 									</picture>
 									<!-- /picture-->
 									<div class="video-item__play">
@@ -1902,29 +2065,62 @@
 					</div>
 				</div>
 			</footer>
-		</div><a class="btn link-modal-js" href="#modal-call">modal</a>
+		</div>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
 					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						<div class="form-wrap__title h5 strong mb-3">Оставьте ваш номер телефона и&nbsp;мы перезвоним вам  в&nbsp;течение 30&nbsp;минут
 						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/> 
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
+					<button class="form-wrap__btn btn" type="submit"> Отправить 
 					</button>
-					<div class="form-wrap__policy">
-						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
-					</div>
 				</form>
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win" id="modal-thanks" style="display: none">
+			<div class="form-wrap">
+				<div class="text-center">
+					<div class="form-wrap__title h5 fw-400">Спасибо! Ваш номер успешно получен!
+					</div>
+					<div class="form-wrap__title h5 fw-400">Мы&nbsp;<strong>обязательно</strong> перезвоним вам
+					</div>
+					<div class="small text-secondary mb-3">Рабочие часы 09:00-20:00 пн-пт, если <br/>сейчас мы&nbsp;не&nbsp;работаем, наберём <br/>когда откроемся</div>
+				</div>
+				<button class="form-wrap__btn btn modal-close-js" type="submit">закрыть
+				</button>
+			</div>
+		</div>
+		<!-- #modal-thanks-->
+		<div class="modal-win" id="modal-time" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title h5 strong mb-3">Выберите  <br> удобное время
+						</div>
+						<div class="small text-secondary mb-3">Часовой пояс Москва</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<select class="form-wrap__input form-select" name="select">
+							<option value="09:00">09:00</option>
+							<option value=" placeholder 1">placeholder 1</option>
+							<option value=" placeholder 2">placeholder 2</option>
+							<option value=" placeholder 3">placeholder 3</option>
+							<option value=" placeholder 4">placeholder 4</option>
+						</select> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> Отправить 
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-time-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

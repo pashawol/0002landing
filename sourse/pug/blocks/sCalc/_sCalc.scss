@@ -32,6 +32,10 @@
 		}
 		&__block{
 			width: 100%;
+			@include mt;
+			&:hover {
+				box-shadow: 6px 3px 0.8125rem 3px rgb(0 0 0 / 5%);
+			}
 			@include media-breakpoint-up(md) {
 				max-width: 325px; 
 				padding: rem(25) rem(25) rem(15);

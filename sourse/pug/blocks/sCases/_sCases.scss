@@ -24,6 +24,11 @@
 	&__card{
 		border-radius: $border-radius;
 		background-color: #ffffff;
+		@include  mt;
+		&.active,
+		&:hover {
+			box-shadow: 6px 3px 0.8125rem 3px rgb(0 0 0 / 5%);
+		}
 		@include media-breakpoint-up(lg) {
 		min-height: rem(232);
 		}
