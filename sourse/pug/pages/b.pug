@@ -1,0 +1,58 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sAnswers/_sAnswers.pug
+include ../blocks/sGaranties/_sGaranties.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sResults/_sResults.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sSeeForYourself/_sSeeForYourself.pug
+include ../blocks/sPositions/_sPositions.pug
+include ../blocks/sTest/_sTest.pug
+include ../blocks/sOurSEO/_sOurSEO.pug
+include ../blocks/sCompare/_sCompare.pug
+include ../blocks/sTarifs/_sTarifs.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sGoTest/_sGoTest.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	header.bg-wrap
+		+pic("head-bg.jpg",'bg').picture-bg 
+		+topLine()
+		+top-nav() 
+		+headerBlock()
+		+sQuestions
+	+sAnswers2
+	+sGaranties
+	+sCases
+	+sResults
+	+sCalc
+	+sSeeForYourself
+	+sPositions
+	+sTest
+	+sOurSEO
+	+sCompare
+	+sTarifs
+	+sRews
+	+sLogos
+	+sBlog
+	+sGoTest
+
+	+footer()
+      
+
+
+
