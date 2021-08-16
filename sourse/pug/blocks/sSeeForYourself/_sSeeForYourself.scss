@@ -21,6 +21,9 @@
 	
 		&__caption{
 			// @extend .row
+			@include media-breakpoint-down(md) {
+				justify-content: center;
+			}
 			display: flex;
 			flex-wrap: wrap;
 				@include media-breakpoint-up(lg) {
@@ -76,7 +79,11 @@
 	.tabs__wrap{
 		border-radius: $border-radius;
 		background-color: #f6f7fa;
-		padding: rem(45) rem(50);
+		
+		@include media-breakpoint-up(sm) {
+			padding: rem(45) rem(50);
+		}
+		padding: rem(25) rem(15);
 		position: relative;
 		&::before{
 			content: url(../img/@2x/webp/woman.webp);

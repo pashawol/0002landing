@@ -2,8 +2,10 @@
 	// display: block;
 	width: 100%;
 	position: relative;
-	max-width: rem(500);
-
+	max-width: rem(370);
+	border-radius: $border-radius;
+	padding-left: rem(60);
+	padding-right: rem(60);
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;

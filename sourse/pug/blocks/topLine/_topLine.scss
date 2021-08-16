@@ -1,11 +1,14 @@
 
 	// start .topLine
 	.topLine {
-		 --sPT: #{rem(24)};
-		 --sPB: #{rem(14)};
-		 .row{
-			 align-items: center;
-			 @include media-breakpoint-up(xl) {
+		@include media-breakpoint-up(sm) {
+			--sPT: #{rem(24)};
+		}
+		--sPT: #{rem(14)};
+		--sPB: #{rem(14)};
+		.row{
+			align-items: center;
+			@include media-breakpoint-up(xl) {
 				 --bs-gutter-x: 44px;
 				}
 			}
@@ -62,6 +65,10 @@
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(xs) {
+		.row{
+			--bs-gutter-x: 10px
+		}
+	} 
 
 } // end.topLine

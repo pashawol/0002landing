@@ -7,9 +7,13 @@
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 margin-bottom: 1rem;
  	}
  	&__btn{
  		cursor: pointer;
+		 @extend .btn;
+		 @extend .btn-y;
+		 width: 100%;
  	}
  	label{
  		width: 100%;

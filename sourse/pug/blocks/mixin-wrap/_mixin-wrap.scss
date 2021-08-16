@@ -1,32 +1,44 @@
- 
-	  
-.soc{
-	@include roww(10px, m);
+.soc {
+	@include roww(9px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		width: rem(41);
+		height: rem(41);
+		border-radius: $border-radius;
+		background-color: $body-color;
+		color: #888888;
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
+			color: $white;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-	 
-
+	.icon-vkontakte {
+		font-size: rem(11);
+	}
+	.icon-facebook {
+		font-size: rem(19);
+	}
+	.icon-youtube {
+		font-size: rem(20);
+	}
+	.icon-instagram {
+		font-size: rem(15);
+	}
 }
- 
 
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,3 +46,28 @@
 	}
 }
 
+
+.video-item{
+	@include block(570,319);
+	@include media-breakpoint-down(md){
+		margin-top: 20px;
+	}
+	&__play{
+		@include a-cent1;
+		width: rem(88);
+		height: rem(88);
+		padding-left: rem(6);
+		border-radius: 50%;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media-breakpoint-between(md,xl){
+			width: rem(60);
+			height: rem(60);
+		}
+		svg{
+			font-size: 23px;
+		}
+	}
+}

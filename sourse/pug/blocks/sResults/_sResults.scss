@@ -17,8 +17,12 @@
 		// overflow: hidden;
 		z-index: 2;
 		picture{
+				@include media-breakpoint-down(xl){
+					left: -160px;
+				}
 				@include media-breakpoint-down(lg){
 					opacity: 0.35;
+					display: none;
 				}
 			width: 60%;
 			position: absolute;

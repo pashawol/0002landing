@@ -1,8 +1,7 @@
 //- WP menu
 mixin mnu()
 	-
-		var nav= { 
-			"SEO продвижение":"#",
+		var nav= {  
 			"Кейсы":"#",
 			"Услуги":"#",
 			"Цены":"#" ,
@@ -11,7 +10,15 @@ mixin mnu()
 			"Контакты":"#",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		li.menu-item.menu-item-has-children(itemprop="item" )
+			a(href='#' itemprop="url") SEO продвижение
+			ul.sub-menu
+				li: a(href="")  Наименование услуги
+				li: a(href="")  Наименование услуги
+				li: a(href="")  Наименование услуги
+
 		each linkPatch, linkName in nav
+
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
 
 //- menu

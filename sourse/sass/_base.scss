@@ -1,5 +1,5 @@
 .pixel-perfect {
-	top: 5px;
+	// top: 5px;
 	top: -20px;
 	display: block;
 	@include a-cent(x);
@@ -10,7 +10,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	opacity: 0.7;
 } 
 
 body,
@@ -531,8 +531,23 @@ iframe {
 	// background-color: $body-colot;
 	background-image: linear-gradient(to top, #4fad3f 0%, #70b946 100%);
 	color: #fff !important;
+	text-transform: uppercase;
 	&:hover{ 
 		background-image: linear-gradient(to top, #70b946 0%, #4fad3f 100%);
+	}
+}
+.btn-y {
+	text-transform: uppercase;
+	height: 68px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-shadow: 6px 3px $small 3px rgba(233, 199, 49, 0.2); 
+	background-color: $body-color;
+	background-image: linear-gradient(to top, #e9b731 0%, #e9cd31 100%);
+	&:hover{ 
+		background-image: linear-gradient(to bottom, #e9b731 0%, #e9cd31 100%); 
 	}
 }
 
@@ -554,8 +569,12 @@ iframe {
 	letter-spacing: 0.8px;
 	background-color: $body-color;
 	color: #fff;
+	@include mt;
+	border: 1px solid $body-color;
+	box-shadow: none !important;
 	&:hover{
-		background-color: #e9bd31;
+		background-color: #e9bd31 !important;
+		border-color: #e9bd31 !important;
 		color: $body-color;
 	}
 }
@@ -596,4 +615,8 @@ iframe {
 			right: 100%;
 		}
 	}
+}
+
+.fw-400{
+	font-weight: 400;
 }

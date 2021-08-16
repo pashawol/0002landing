@@ -52,3 +52,118 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sTarifs
+
+
+.tarif-item{
+	&.optim &__panel {
+		border: 4px solid $primary;
+	}
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100% - 50px);
+	margin-bottom: 50px;
+	@include media-breakpoint-up(xl){
+
+		--sp-y: 32px;
+	}
+	--sp-y: 15px;
+	&__panel{
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		background-color: #fff;
+		margin-bottom: rem(25);
+		padding: 30px var(--sp-y) 30px;
+		border-radius: $border-radius;
+		img{
+			margin-top: -50px;
+			margin-bottom: 20px;
+		}
+	}
+	&__title{
+		font-size: 18px;
+		font-weight: 700;
+		@extend .mono;
+		margin-bottom: 1rem;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	&__head{
+		p{
+			color: #888888;
+			font-family: Roboto;
+			font-size: $small;
+		}
+		border-bottom: 2px solid $primary;
+		margin-bottom: 1rem;
+		min-height: rem(190);
+	}
+	&__body{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	.ul2{
+		position: relative;
+		z-index: 2;
+		flex-grow: 1;
+		padding-top: rem(18);
+		// margin-bottom: 0;
+		&::before{
+			content: '';
+			position: absolute;
+			width: calc(100% + var(--sp-y) * 2);
+			left: calc(-1* var(--sp-y));
+			height: calc(100% + 30px + 1rem) ;
+			background-color: #fdf8ea;
+			border-radius: 0 0 $border-radius $border-radius ; 
+			top: 0;
+		}
+	}
+	li{
+		list-style: none;
+		position: relative;
+		padding-left: rem(20);
+		font-size: $small;
+		margin-bottom: rem(10);
+		&::before {
+			content: var(--check);
+			position: absolute;
+			// right: 100%;
+			top: 0; 
+			left: 0;
+		}
+	}
+	&__head{
+		text-align: center;
+	}
+	&__price{
+		font-size: 21px;
+		font-weight: 500;
+		margin-bottom: rem(18);
+		text-align: center;
+	}
+	&__btn{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 11px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.73px;
+		color: $body-color;
+		border-radius: $border-radius;
+		border: 2px solid $primary;
+		text-align: center;
+		height: rem(67);
+		&:hover{
+			color: $success;
+			border-color: $success;
+		}
+	}
+}
+
+
+.sTarifs__second{
+	display: none;
+}

@@ -1,18 +1,34 @@
 
-mixin modal() 
-
-	a.btn.link-modal-js(href="#modal-call") modal
+mixin modal()  
 	//  start modals
 
 	+b.modal-win(id="modal-call" class=" " style="display: none" )
 		+form-wrap
 			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+				+e.title.h5.strong.mb-3 Оставьте ваш номер телефона и&nbsp;мы перезвоним вам  в&nbsp;течение 30&nbsp;минут
 
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  )  
-			+policy()
+			+input("+7 (___) ___-__-__",'tel')(required)  
+			+e.BUTTON.btn.btn(type="submit"  )  Отправить 
 	// #modal-call
+	+b.modal-win(id="modal-thanks" class=" " style="display: none" )
+		+b.form-wrap
+			.text-center
+				+e.title.h5.fw-400 Спасибо! Ваш номер успешно получен!
+				+e.title.h5.fw-400 Мы&nbsp;#[strong обязательно] перезвоним вам
+				.small.text-secondary.mb-3 Рабочие часы 09:00-20:00 пн-пт, если 
+					br
+					| сейчас мы&nbsp;не&nbsp;работаем, наберём 
+					br
+					| когда откроемся
+			+e.BUTTON.btn.btn.modal-close-js(type="submit"  ) закрыть
+	// #modal-thanks
+	+b.modal-win(id="modal-time" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title.h5.strong.mb-3 Выберите  <br> удобное время
+				.small.text-secondary.mb-3 Часовой пояс Москва
+			+input("09:00",'select') 
+			+e.BUTTON.btn.btn(type="submit"  )  Отправить 
+	// #modal-time
 	
 	// end modals
