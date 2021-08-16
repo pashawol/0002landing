@@ -150,6 +150,24 @@
 			top:rem(300);
 			left:4%;
 		}
+		&::before{
+			content:'';
+			z-index: -1;
+			background-image:url('../img/phrase-before.png');
+			width:15px;
+			height:13px;
+			left:-9px;
+			top:60px;
+			background-size: contain;
+			@include media-breakpoint-down(lg){
+				top: 90px;
+			}
+			@include media-breakpoint-down(sm){
+				top: -10px;
+				left:7px;
+				transform: rotate(90deg);
+			}
+		}
 	}
 	#phrase2{
 		left:44.48%;
@@ -167,6 +185,24 @@
 			left:auto;
 			right:42%;
 		}
+		&::after{
+			content:'';
+			position: absolute;
+			z-index: -1;
+			background-image:url('../img/phrase-after.png');
+			width:15px;
+			height:13px;
+			right:-9px;
+			top:60px;
+			background-size: contain;
+			@include media-breakpoint-down(lg){
+				top: 90px;
+			}
+			@include media-breakpoint-down(lg){
+				top: 73px;
+				right: -11px;
+			}
+		}
 	}
 	.answer-man{
 		position: absolute;
@@ -174,7 +210,7 @@
 		height: rem(411);
 		top:rem(53);
 		left:49.42%;
-		z-index: -1;
+		z-index: -10;
 		@include media-breakpoint-down(xl){
 			bottom:0;
 			top:auto;
