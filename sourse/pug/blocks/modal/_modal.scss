@@ -21,6 +21,7 @@
 	&--price{
 		padding-bottom: 0;
 		padding-top: rem(60);
+		
 	}
 	.modal-content {
 		// max-width: 485px;
@@ -188,9 +189,12 @@ a {
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		// overflow: hidden;
+
 		img{
 			max-width: none;
 			width: rem(379);
+				border-radius: $border-radius;
 		}
 	}
 	&__name{
