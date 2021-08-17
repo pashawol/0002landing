@@ -64,5 +64,23 @@ mixin modal()
 				.col-6.d-none.d-md-block
 					+pic("modal-price-2.png",'',0).modal-price-pic
 	// #modal-gift
+	+b.modal-win--xl(id="modal-feedback" class=" " style="display: none" )
+		+form-wrap
+			.row
+				.col.col-feedback
+					//- .text-center
+					+e.title--price.h4.strong.mb-3 Спасибо за&nbsp;доверие!<br />Ваши ответы и&nbsp;контакты успешно получены
+					+e.feedback-caption Мы&nbsp;обязательно свяжемся с&nbsp;вами по&nbsp;телефону, чтобы задать уточняющие вопросы.<br /><br />Не&nbsp;всю информацию можно собрать через квиз, поэтому мы&nbsp;проводим полноценную телефонную консультацию.
+					+e.BUTTON.btn--xl.btn(type="button") Узнать стоимость продвижения
+					+e.note Если вы&nbsp;не&nbsp;уверенны правильно&nbsp;ли ввели номер телефона, оставьте его снова по&nbsp;кнопке ниже
+					+e.BUTTON.btn--grey.btn отправить телефон снова
+				.col-7.d-none.d-lg-block
+					+e.big-title Ваши подарки!
+					+e.BUTTON.btn--pdf.btn Открыть PDF
+					+e.feedback-caption2 Для получения аудита с&nbsp;вами свяжется наш специалист по&nbsp;телефону
+					+icon('feedback-arrow').feedback-arrow
+					+pic('feedback-paper','',0).feedback-paper
+			img(src='img/bg-feedback.png').bg-feedback
+	// #modal-gift
 	
 	// end modals

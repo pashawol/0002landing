@@ -14,6 +14,9 @@
 	&--lg{
 		max-width: rem(770);
 	}
+	&--xl{
+		max-width: rem(970);
+	}
 	&--price{
 		padding-bottom: 0;
 		padding-top: rem(60);
@@ -111,10 +114,74 @@ a {
 }
 
 .form-wrap{
+	&__big-title{
+		font-size: rem(59);
+		text-align: center;
+		opacity: 0.38;
+		color: #d5d8e2;
+		font-weight: 700;
+		line-height: 68.55px;
+		padding-bottom: rem(30);
+	}
+	.icon{
+		&-feedback-arrow{
+			position: absolute;
+			right: 31%;
+			top:32.2%;
+			color: #bebebe;
+			font-size: rem(19);
+		}
+	}
+	&__btn{
+		&--xl{
+			@include media-breakpoint-up(lg){
+				width: 87%;
+			}
+		}
+		&--pdf{
+			width:33%;
+			margin-left: rem(40);
+		}
+		&--grey{
+			@include media-breakpoint-up(lg){
+				width: 70%;
+			}
+			background-color: #f6f7fa;
+			background-image: none;
+			box-shadow: none;
+			border: 2px solid #bebebe;
+			text-transform: uppercase;
+			color: #8d8d8d !important;
+			&:hover{
+				background-image: none;
+				box-shadow: none;
+				border-color: #989595;
+				color: #989595 !important;
+			}
+		}
+	}
+	&__feedback-caption{
+		padding-bottom: rem(20);
+	}
+	&__feedback-caption2{
+		margin-left: rem(40);
+		font-size: rem(13);
+		line-height: rem(21);
+		font-weight: 400;
+		color: #888888;
+		width: 35%;
+		padding-top: rem(18);
+	}
 	&__title{
 		&--price{
-			width:110%;
+			width:100%;
 		}
+	}
+	&__note{
+		padding-top: rem(26);
+		padding-bottom: rem(20);
+		font-size: rem(13);
+		color: #b8b8b8;
 	}
 	&__checklist{
 		width:115%;
@@ -162,6 +229,28 @@ a {
 		bottom: 0;
 		right: 0;
 	}
+}
+.bg-feedback{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -100;
+	width: 43%;
+	height: 100%;
+	@include media-breakpoint-down(lg){
+		display: none;
+	}
+}
+.col-feedback{
+	display: flex;
+	flex-direction: column;
+	align-items:left;
+}
+.feedback-paper{
+	width: 68.8%;
+	position: absolute;
+	bottom: 0;
+	right: rem(23);
 }
 // 
 @include media-breakpoint-up(xl) {}
