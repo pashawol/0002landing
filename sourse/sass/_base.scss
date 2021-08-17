@@ -603,7 +603,7 @@ iframe {
 		padding-left: var(--p-x);
 		margin-left: calc(-1 * var(--p-x));
 		&::before{
-			left: 100%;
+			left: calc(100% - 1px);
 		}
 	}
 	&--left{
@@ -612,7 +612,7 @@ iframe {
 		padding-right: var(--p-x);
 		margin-right: calc(-1 * var(--p-x));
 		&::before{
-			right: 100%;
+			right: calc(100% - 1px);
 		}
 	}
 }

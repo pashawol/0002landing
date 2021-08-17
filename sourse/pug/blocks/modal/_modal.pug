@@ -47,35 +47,45 @@ mixin modal()
 					+e.BUTTON.btn.btn(type="submit"  )  Отправить 
 	// #modal-gift
 	+b.modal-win--qwiz.p-0(id="modal-qwiz" class=" " style="display: none" )
-		+form-wrap
-			.row
-				.col-8.d-none.d-md-block
+		+b.form-wrap
+			.row.gx-0
+				.col-lg-8
 					+b.modal-left
-						mixin item(t)
-							+e.step
+						mixin item(t,w,st)
+							+e.step(data-stock= st)&attributes(attributes)
 								+e.head= t
 								+e.body
 									block
 								+e.footer
+									.row
+										.col
+											+e.progress-text Готово #[span= w]%
+											+b.progress
+												+e.bar(style=`width: ${w}%;`)
+										.col-auto
+											+e.btn--prev.btn-light(type="button")
+												+icon("arrow-left")
+										.col-auto
+											+e.btn--next.btn-gradient(type="button") далее
 						mixin radio(t,n)
-							+b.LABEL.custon-radio
+							+b.LABEL.custom-radio
 								input(type="radio", name= n)
 								+e.block
 									+e.circle
 									= t
 
-						+item('В каком регионе вам нужно продвинуть сайт?')
+						+item('В каком регионе вам нужно продвинуть сайт?',0, 0).active
 							+radio('Москва','radio-city')
 							+radio('Санкт-Петербург','radio-city')
 							+radio('Город миллионник','radio-city')
 							+radio('Продвижение в нескольких регионах','radio-city')
 							+radio('Продвижение по всей России','radio-city')
 							+radio('Пока точно не знаю, нужна консультация','radio-city')
-						+item('Какой у Вас сайт?')
+						+item('Какой у Вас сайт?','25',3)
 							+radio('Одностраничный лендинг','radio-site')
 							+radio('Многостраничный сайт','radio-site')
 							+radio('Затрудняюсь с ответом','radio-site')
-						+item('Какая тематика у Вашего сайта?')
+						+item('Какая тематика у Вашего сайта?','50',6)
 							+radio('Ремонт','radio-theme')
 							+radio('Недвижимость','radio-theme')
 							+radio('Услуги населению','radio-theme')
@@ -83,13 +93,13 @@ mixin modal()
 							+radio('Услуги для бизнеса','radio-theme')
 							+radio('Медицина','radio-theme')
 							+radio('Другое','radio-theme')
-						+item('Вы хотите "SEO-под ключ"  или у Вас есть программист, который будет вносить изменения по нашкму ТЗ?')
+						+item('Вы хотите "SEO-под ключ"  или у Вас есть программист, который будет вносить изменения по нашкму ТЗ?','75',9)
 							+radio('Будет работать наш программист','radio-prog')
 							+radio('SEO под ключ','radio-prog')
 				.col
 					+b.modal-right
 						+e.head
-							+e.stock Ваша скидка 0%
+							+e.stock Ваша скидка #[span 0]%
 						+e.body
 							+b.seo
 								+e.avatar
@@ -100,5 +110,41 @@ mixin modal()
 							p.text-secondary Если ваш бизнес ориентирован на какой-то регион, то продвигать сайт надо по геозависимым запросам — ключевым словам, которые привязаны к этой территории, так как пользователи ищут услуги или товары по таким запросам, и рассчитывают увидеть на странице поиска местные компании.
 						+e.footer
 	// #modal-qwiz
+	+b.modal-win--lg.--price(id="modal-price" class=" " style="display: none" )
+		+b.form-wrap
+			.row
+				.col
+					//- .text-center
+					+e.title--price.h4.strong.mb-3 Ответьте на&nbsp;4&nbsp;вопроса,<br />чтобы узнать стоимость продвижения вашего сайта
+					.small.text-secondary.mb-1
+						strong.text-body И&nbsp;получите&nbsp;12% скидку, и&nbsp;2&nbsp;подарка:
+					+e.UL.checklist
+						li чек-лист для проверки SEO на&nbsp;сайте;
+						li информацию, как поднять конверсию на&nbsp;сайте в&nbsp;3&nbsp;раза.
+					+e.btn.btn.btn-qwiz( type="button") Узнать стоимость продвижения
+					+e.bonus
+						+e.bonus-caption бонусы после прохождения теста
+						+pic('modal-price-1.png','',0)
+				.col-6.d-none.d-md-block
+					+pic("modal-price-2.png",'',0).modal-price-pic
+	// #modal-gift
+	+b.modal-win--xl(id="modal-feedback" class=" " style="display: none" )
+		+form-wrap
+			.row
+				.col.col-feedback
+					//- .text-center
+					+e.title--price.h4.strong.mb-3 Спасибо за&nbsp;доверие!<br />Ваши ответы и&nbsp;контакты успешно получены
+					+e.feedback-caption Мы&nbsp;обязательно свяжемся с&nbsp;вами по&nbsp;телефону, чтобы задать уточняющие вопросы.<br /><br />Не&nbsp;всю информацию можно собрать через квиз, поэтому мы&nbsp;проводим полноценную телефонную консультацию.
+					+e.BUTTON.btn--xl.btn(type="button") Узнать стоимость продвижения
+					+e.note Если вы&nbsp;не&nbsp;уверенны правильно&nbsp;ли ввели номер телефона, оставьте его снова по&nbsp;кнопке ниже
+					+e.BUTTON.btn--grey.btn отправить телефон снова
+				.col-7.d-none.d-lg-block
+					+e.big-title Ваши подарки!
+					+e.BUTTON.btn--pdf.btn Открыть PDF
+					+e.feedback-caption2 Для получения аудита с&nbsp;вами свяжется наш специалист по&nbsp;телефону
+					+icon('feedback-arrow').feedback-arrow
+					+pic('feedback-paper','',0).feedback-paper
+			img(src='img/bg-feedback.png').bg-feedback
+	// #modal-gift
 	
 	// end modals

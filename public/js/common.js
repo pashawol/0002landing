@@ -325,6 +325,42 @@ function eventHandler() {
 		e.preventDefault();
 		$(this).toggleClass('active').next().slideToggle();
 	});
+	let stockText = $(".modal-right__stock span");
+	$(".modal-left__btn--next").click(function () {
+		let th = $(this);
+		let stock = th.parents(".modal-left__step").next().data("stock");
+		stockText.text(stock);
+		th.parents(".modal-left__step").removeClass("active").next().addClass("active");
+	});
+	$(".modal-left__btn--prev").click(function () {
+		let th = $(this);
+		let prev = th.parents(".modal-left__step").prev();
+		let stock = prev.data("stock");
+
+		if (!prev.length) {
+			Fancybox.close();
+			Fancybox.show([{
+				src: "#modal-price",
+				type: "inline"
+			}]);
+		} else {
+			stockText.text(stock);
+			th.parents(".modal-left__step").removeClass("active").prev().addClass("active");
+		}
+	});
+	$(".btn-qwiz").click(function () {
+		let th = $(this);
+		let stock = th.parents(".modal-left__step").prev().data("stock");
+		stockText.text(stock);
+		th.parents(".modal-left__step").removeClass("active").prev().addClass("active");
+	});
+	$(".btn-qwiz").click(function () {
+		Fancybox.close();
+		Fancybox.show([{
+			src: "#modal-qwiz",
+			type: "inline"
+		}]);
+	});
 }
 
 ;
