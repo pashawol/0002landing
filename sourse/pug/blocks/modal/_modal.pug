@@ -62,7 +62,10 @@ mixin modal()
 						+e.bonus-caption бонусы после прохождения теста
 						+pic('modal-price-1.png','',0)
 				.col-6.d-none.d-md-block
-					+pic("modal-price-2.png",'',0).modal-price-pic
+					+e.modal-price-pic
+						+pic('modal-price-2.png','',0)
+						+e.name Кудрявцев Сергей
+						+e.post Руководитель компании
 	// #modal-gift
 	+b.modal-win--xl(id="modal-feedback" class=" " style="display: none" )
 		+form-wrap
@@ -76,7 +79,7 @@ mixin modal()
 					+e.BUTTON.btn--grey.btn отправить телефон снова
 				.col-7.d-none.d-lg-block
 					+e.big-title Ваши подарки!
-					+e.BUTTON.btn--pdf.btn Открыть PDF
+					+e.btn--pdf.btn(href='#') Открыть PDF
 					+e.feedback-caption2 Для получения аудита с&nbsp;вами свяжется наш специалист по&nbsp;телефону
 					+icon('feedback-arrow').feedback-arrow
 					+pic('feedback-paper','',0).feedback-paper
