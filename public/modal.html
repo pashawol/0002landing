@@ -115,7 +115,7 @@
 				</div>
 				<!-- end top-nav-->
 			</header>
-			<div class="section container"><a class="btn btn-primary m-2 link-modal-js" href="#modal-call">Обратный звонок</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-thanks">Спасибо</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-time">modal-time</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-gift">modal-gift</a>
+			<div class="section container"><a class="btn btn-primary m-2 link-modal-js" href="#modal-call">Обратный звонок</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-thanks">Спасибо</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-time">modal-time</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-gift">modal-gift</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-qwiz">modal-qwiz</a>
 			</div>
 		</div>
 		<!--  start modals-->
@@ -201,6 +201,131 @@
 			</div>
 		</div>
 		<!-- #modal-gift-->
+		<div class="modal-win modal-win--qwiz p-0" id="modal-qwiz" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="row">
+						<div class="col-8 d-none d-md-block">
+							<div class="modal-left">
+								<div class="modal-left__step">
+									<div class="modal-left__head">В каком регионе вам нужно продвинуть сайт?
+									</div>
+									<div class="modal-left__body">
+										<label class="custon-radio">
+											<input type="radio" name="radio-city"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Москва</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-city"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Санкт-Петербург</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-city"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Город миллионник</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-city"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Продвижение в нескольких регионах</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-city"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Продвижение по всей России</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-city"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Пока точно не знаю, нужна консультация</span>
+										</label>
+									</div>
+									<div class="modal-left__footer">
+									</div>
+								</div>
+								<div class="modal-left__step">
+									<div class="modal-left__head">Какой у Вас сайт?
+									</div>
+									<div class="modal-left__body">
+										<label class="custon-radio">
+											<input type="radio" name="radio-site"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Одностраничный лендинг</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-site"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Многостраничный сайт</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-site"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Затрудняюсь с ответом</span>
+										</label>
+									</div>
+									<div class="modal-left__footer">
+									</div>
+								</div>
+								<div class="modal-left__step">
+									<div class="modal-left__head">Какая тематика у Вашего сайта?
+									</div>
+									<div class="modal-left__body">
+										<label class="custon-radio">
+											<input type="radio" name="radio-theme"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Ремонт</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-theme"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Недвижимость</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-theme"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Услуги населению</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-theme"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Строительство</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-theme"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Услуги для бизнеса</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-theme"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Медицина</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-theme"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Другое</span>
+										</label>
+									</div>
+									<div class="modal-left__footer">
+									</div>
+								</div>
+								<div class="modal-left__step">
+									<div class="modal-left__head">Вы хотите &quot;SEO-под ключ&quot;  или у Вас есть программист, который будет вносить изменения по нашкму ТЗ?
+									</div>
+									<div class="modal-left__body">
+										<label class="custon-radio">
+											<input type="radio" name="radio-prog"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>Будет работать наш программист</span>
+										</label>
+										<label class="custon-radio">
+											<input type="radio" name="radio-prog"/><span class="custon-radio__block"><span class="custon-radio__circle"></span>SEO под ключ</span>
+										</label>
+									</div>
+									<div class="modal-left__footer">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="modal-right">
+								<div class="modal-right__head">
+									<div class="modal-right__stock">Ваша скидка 0%
+									</div>
+								</div>
+								<div class="modal-right__body">
+									<div class="seo">
+										<div class="seo__avatar">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/avatar.webp"/><img src="img/@2x/avatar.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div>
+											<div class="fw-500">Анастасия Королькова</div>
+											<div class="text-secondary">SEO-специалист</div>
+										</div>
+									</div>
+									<p class="text-secondary">Если ваш бизнес ориентирован на какой-то регион, то продвигать сайт надо по геозависимым запросам — ключевым словам, которые привязаны к этой территории, так как пользователи ищут услуги или товары по таким запросам, и рассчитывают увидеть на странице поиска местные компании.</p>
+								</div>
+								<div class="modal-right__footer">
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-qwiz-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

@@ -46,5 +46,59 @@ mixin modal()
 					+input("+7 (___) ___-__-__",'tel')(required)  
 					+e.BUTTON.btn.btn(type="submit"  )  Отправить 
 	// #modal-gift
+	+b.modal-win--qwiz.p-0(id="modal-qwiz" class=" " style="display: none" )
+		+form-wrap
+			.row
+				.col-8.d-none.d-md-block
+					+b.modal-left
+						mixin item(t)
+							+e.step
+								+e.head= t
+								+e.body
+									block
+								+e.footer
+						mixin radio(t,n)
+							+b.LABEL.custon-radio
+								input(type="radio", name= n)
+								+e.block
+									+e.circle
+									= t
+
+						+item('В каком регионе вам нужно продвинуть сайт?')
+							+radio('Москва','radio-city')
+							+radio('Санкт-Петербург','radio-city')
+							+radio('Город миллионник','radio-city')
+							+radio('Продвижение в нескольких регионах','radio-city')
+							+radio('Продвижение по всей России','radio-city')
+							+radio('Пока точно не знаю, нужна консультация','radio-city')
+						+item('Какой у Вас сайт?')
+							+radio('Одностраничный лендинг','radio-site')
+							+radio('Многостраничный сайт','radio-site')
+							+radio('Затрудняюсь с ответом','radio-site')
+						+item('Какая тематика у Вашего сайта?')
+							+radio('Ремонт','radio-theme')
+							+radio('Недвижимость','radio-theme')
+							+radio('Услуги населению','radio-theme')
+							+radio('Строительство','radio-theme')
+							+radio('Услуги для бизнеса','radio-theme')
+							+radio('Медицина','radio-theme')
+							+radio('Другое','radio-theme')
+						+item('Вы хотите "SEO-под ключ"  или у Вас есть программист, который будет вносить изменения по нашкму ТЗ?')
+							+radio('Будет работать наш программист','radio-prog')
+							+radio('SEO под ключ','radio-prog')
+				.col
+					+b.modal-right
+						+e.head
+							+e.stock Ваша скидка 0%
+						+e.body
+							+b.seo
+								+e.avatar
+									+pic("avatar.png",'',0)
+								div
+									.fw-500 Анастасия Королькова
+									.text-secondary SEO-специалист
+							p.text-secondary Если ваш бизнес ориентирован на какой-то регион, то продвигать сайт надо по геозависимым запросам — ключевым словам, которые привязаны к этой территории, так как пользователи ищут услуги или товары по таким запросам, и рассчитывают увидеть на странице поиска местные компании.
+						+e.footer
+	// #modal-qwiz
 	
 	// end modals
