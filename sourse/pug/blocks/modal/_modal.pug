@@ -46,5 +46,23 @@ mixin modal()
 					+input("+7 (___) ___-__-__",'tel')(required)  
 					+e.BUTTON.btn.btn(type="submit"  )  Отправить 
 	// #modal-gift
+	+b.modal-win--lg.--price(id="modal-price" class=" " style="display: none" )
+		+form-wrap
+			.row
+				.col
+					//- .text-center
+					+e.title--price.h4.strong.mb-3 Ответьте на&nbsp;4&nbsp;вопроса,<br />чтобы узнать стоимость продвижения вашего сайта
+					.small.text-secondary.mb-1
+						strong.text-body И&nbsp;получите&nbsp;12% скидку, и&nbsp;2&nbsp;подарка:
+					+e.UL.checklist
+						li чек-лист для проверки SEO на&nbsp;сайте;
+						li информацию, как поднять конверсию на&nbsp;сайте в&nbsp;3&nbsp;раза.
+					+e.BUTTON.btn.btn(type="button") Узнать стоимость продвижения
+					+e.bonus
+						+e.bonus-caption бонусы после прохождения теста
+						+pic('modal-price-1.png','',0)
+				.col-6.d-none.d-md-block
+					+pic("modal-price-2.png",'',0).modal-price-pic
+	// #modal-gift
 	
 	// end modals
