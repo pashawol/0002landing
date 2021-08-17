@@ -328,9 +328,20 @@ function eventHandler() {
 	let stockText = $(".modal-right__stock span");
 	$(".modal-left__btn--next").click(function () {
 		let th = $(this);
-		let stock = th.parents(".modal-left__step").next().data("stock");
-		stockText.text(stock);
-		th.parents(".modal-left__step").removeClass("active").next().addClass("active");
+		let next = th.parents(".modal-left__step").next();
+		let stock = next.data("stock");
+		console.log(next);
+
+		if (!next.length) {
+			Fancybox.close();
+			Fancybox.show([{
+				src: "#modal-feedback",
+				type: "inline"
+			}]);
+		} else {
+			stockText.text(stock);
+			th.parents(".modal-left__step").removeClass("active").next().addClass("active");
+		}
 	});
 	$(".modal-left__btn--prev").click(function () {
 		let th = $(this);
@@ -347,12 +358,6 @@ function eventHandler() {
 			stockText.text(stock);
 			th.parents(".modal-left__step").removeClass("active").prev().addClass("active");
 		}
-	});
-	$(".btn-qwiz").click(function () {
-		let th = $(this);
-		let stock = th.parents(".modal-left__step").prev().data("stock");
-		stockText.text(stock);
-		th.parents(".modal-left__step").removeClass("active").prev().addClass("active");
 	});
 	$(".btn-qwiz").click(function () {
 		Fancybox.close();

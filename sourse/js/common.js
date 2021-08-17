@@ -326,12 +326,21 @@ $(".sCases__slide").each(function(){
 
 	let stockText = $(".modal-right__stock span")
 	$(".modal-left__btn--next").click(function(){
-		let th = $(this);
-		let stock = th.parents(".modal-left__step").next().data("stock");
-		stockText.text(stock);
-		th.parents(".modal-left__step").removeClass("active")
-		.next().addClass("active") 
-	})
+		let th = $(this); 
+		let next = th.parents(".modal-left__step").next();
+		let stock = next.data("stock"); 
+		console.log(next);
+		if (!next.length) { 
+			Fancybox.close();
+			Fancybox.show([{ src: "#modal-feedback", type: "inline" }]);
+		}
+		else {
+			stockText.text(stock);
+			th.parents(".modal-left__step").removeClass("active")
+				.next().addClass("active")
+		}
+	});
+
 	$(".modal-left__btn--prev").click(function(){
 		let th = $(this);
 		let prev = th.parents(".modal-left__step").prev();
@@ -348,24 +357,7 @@ $(".sCases__slide").each(function(){
 		}
 
 	})
-	$(".btn-qwiz").click(function(){
-		let th = $(this);
-		let next = th.parents(".modal-left__step").next();
-		let stock = next.data("stock");
-		
-
-		if (!next.length) {
-
-			Fancybox.close();
-			Fancybox.show([{ src: "#modal-price", type: "inline" }]);
-		}
-		else {
-			stockText.text(stock);
-			th.parents(".modal-left__step").removeClass("active")
-				.prev().addClass("active")
-		}
-	})
-
+ 
 	$(".btn-qwiz").click(function(){
 		Fancybox.close();
 		Fancybox.show([{ src: "#modal-qwiz", type: "inline" }]);

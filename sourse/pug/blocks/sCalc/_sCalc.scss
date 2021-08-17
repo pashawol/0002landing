@@ -86,6 +86,9 @@
 				img{
 					width: auto;
 					max-width: none;
+					@include media-breakpoint-down(xl) {
+						max-width: 500px;
+					}
 				}
 			}
 		}

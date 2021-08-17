@@ -41,8 +41,8 @@
 								<svg class="icon icon-watsapp ">
 									<use xlink:href="img/svg/sprite.svg#watsapp"></use>
 								</svg>+7 (812) 703-86-28</a></div>
-						<div class="small text-secondary"> Пн-Пт: c 09:00 до 20:00</div>
-						<a class="topLine__btn" href="#">Заказать звонок
+						<div class="small text-secondary mb-2"> Пн-Пт: c 09:00 до 20:00</div>
+						<a class="topLine__btn w-100" href="#">Заказать звонок
 						</a>
 					</div>
 				</div>
@@ -115,7 +115,7 @@
 				</div>
 				<!-- end top-nav-->
 			</header>
-			<div class="section container"><a class="btn btn-primary m-2 link-modal-js" href="#modal-call">Обратный звонок</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-thanks">Спасибо</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-time">modal-time</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-gift">modal-gift</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-qwiz">modal-qwiz</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-price">modal-price</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-feedback">modal-feedback</a>
+			<div class="section container"><a class="btn btn-primary m-2 link-modal-js" href="#modal-call">Обратный звонок</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-thanks">Спасибо</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-time">modal-time</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-gift">modal-gift</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-price">modal-price</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-qwiz">modal-qwiz</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-feedback">modal-feedback</a>
 			</div>
 		</div>
 		<!--  start modals-->
@@ -432,11 +432,17 @@
 						</div>
 					</div>
 					<div class="col-6 d-none d-md-block">
-						<!-- picture-->
-						<picture class="modal-price-pic"> 
-							<source type="image/webp" srcset="img/@2x/webp/modal-price-2.webp"/><img src="img/@2x/modal-price-2.png" alt="" loading="lazy"/>
-						</picture>
-						<!-- /picture-->
+						<div class="form-wrap__modal-price-pic">
+							<!-- picture-->
+							<picture> 
+								<source type="image/webp" srcset="img/@2x/webp/modal-price-2.webp"/><img src="img/@2x/modal-price-2.png" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+							<div class="form-wrap__name">Кудрявцев Сергей
+							</div>
+							<div class="form-wrap__post">Руководитель компании
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -461,8 +467,8 @@
 						<div class="col-7 d-none d-lg-block">
 							<div class="form-wrap__big-title">Ваши подарки!
 							</div>
-							<button class="form-wrap__btn form-wrap__btn--pdf btn">Открыть PDF
-							</button>
+							<a class="form-wrap__btn form-wrap__btn--pdf btn" href="#">Открыть PDF
+							</a>
 							<div class="form-wrap__feedback-caption2">Для получения аудита с&nbsp;вами свяжется наш специалист по&nbsp;телефону
 							</div>
 							<svg class="icon icon-feedback-arrow ">

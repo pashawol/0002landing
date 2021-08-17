@@ -55,19 +55,22 @@
 
 
 .tarif-item{
-	&.optim &__panel {
-		border: 4px solid $primary;
+	&:hover &__panel {
+		// border: 4px solid $primary;
+		box-shadow: 0 0 0 4px $primary;
 	}
 	display: flex;
 	flex-direction: column;
 	min-height: calc(100% - 50px);
 	margin-bottom: 50px;
 	@include media-breakpoint-up(xl){
-
+		
 		--sp-y: 32px;
 	}
 	--sp-y: 15px;
 	&__panel{
+		// border: 4px solid $primary;
+		@include mt;
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;

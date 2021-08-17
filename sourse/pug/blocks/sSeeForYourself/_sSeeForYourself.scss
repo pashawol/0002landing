@@ -85,12 +85,15 @@
 		}
 		padding: rem(25) rem(15);
 		position: relative;
-		&::before{
-			content: url(../img/@2x/webp/woman.webp);
-			position: absolute;
-			bottom: -20px;
-			right: calc(100% - 20px);
-		}
+			@include media-breakpoint-down(md) {
+
+				&::before{
+					content: url(../img/@2x/webp/woman.webp);
+					position: absolute;
+					bottom: -20px;
+					right: calc(100% - 20px);
+				}
+			}
 		h4{
 			font-weight: bold;
 			// margin-bottom: 1em;
