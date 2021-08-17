@@ -88,8 +88,8 @@ a {
 	.icon{
 		&-feedback-arrow{
 			position: absolute;
-			right: 31%;
-			top:32.2%;
+			right: 32%;
+			top:29%;
 			color: #bebebe;
 			font-size: rem(19);
 		}
@@ -97,17 +97,19 @@ a {
 	&__btn{
 		&--xl{
 			@include media-breakpoint-up(lg){
-				width: 87%;
+				width: 95%;
 			}
 		}
 		&--pdf{
-			width:33%;
-			margin-left: rem(40);
+			height: rem(52);
+			width:30%;
+			margin-left: rem(20);
 		}
 		&--grey{
 			@include media-breakpoint-up(lg){
 				width: 70%;
 			}
+			height: rem(52);
 			background-color: #f6f7fa;
 			background-image: none;
 			box-shadow: none;
@@ -126,13 +128,13 @@ a {
 		padding-bottom: rem(20);
 	}
 	&__feedback-caption2{
-		margin-left: rem(40);
-		font-size: rem(13);
+		margin-left: rem(23);
+		font-size: rem(12);
 		line-height: rem(21);
 		font-weight: 400;
 		color: #888888;
-		width: 35%;
-		padding-top: rem(18);
+		width: rem(140);
+		padding-top: rem(40);
 	}
 	&__title{
 		&--price{
