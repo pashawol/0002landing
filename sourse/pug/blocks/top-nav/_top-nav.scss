@@ -1,6 +1,9 @@
 .top-nav {
+	@include media-breakpoint-up(lg) {
+
+	}
 	position: relative;
-	z-index: 200;
+	z-index: 1000;
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
 	@include media-breakpoint-up(xl) {}

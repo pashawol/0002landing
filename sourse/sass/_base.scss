@@ -52,7 +52,7 @@ body {
 		opacity: 1;
 	}
 
-	&::before {
+	header::before {
 		content: '';
 		position: absolute;
 		left: 0;
@@ -83,7 +83,7 @@ body {
 		top: 0;
 		z-index: 999;
 
-		&::before {
+		header::before {
 			z-index: 999;
 			opacity: 0.76;
 		}
