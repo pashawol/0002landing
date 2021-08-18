@@ -9,7 +9,17 @@ mixin modal()
 
 			+input("+7 (___) ___-__-__",'tel')(required)  
 			+e.BUTTON.btn.btn(type="submit"  )  Отправить 
-	// #modal-call
+			+policy
+	+b.modal-win(id="modal-web" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title.h5.strong.mb-3 Оставьте ваш номер телефона и&nbsp;мы перезвоним вам  в&nbsp;течение 30&nbsp;минут
+
+			+input("Адрес сайта",'url')
+			+input("+7 (___) ___-__-__",'tel')(required)  
+			+e.BUTTON.btn.btn(type="submit"  )  Отправить 
+			+policy
+	// #modal-web
 	+b.modal-win(id="modal-thanks" class=" " style="display: none" )
 		+b.form-wrap
 			.text-center

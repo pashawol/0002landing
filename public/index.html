@@ -94,21 +94,40 @@
 					<div class="container">
 						<div class="row">
 							<div class="col">
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">SEO продвижение</a>
-										<ul class="sub-menu">
-											<li><a href=""> Наименование услуги</a></li>
-											<li><a href=""> Наименование услуги</a></li>
-											<li><a href=""> Наименование услуги</a></li>
+								<div class="menu-mobile menu-mobile--js">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
+									<div class="menu-mobile__inner">
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">SEO продвижение</a>
+												<ul class="sub-menu">
+													<li><a href=""> Наименование услуги</a></li>
+													<li><a href=""> Наименование услуги</a></li>
+													<li><a href=""> Наименование услуги</a></li>
+												</ul>
+											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клиентам</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 										</ul>
-									</li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клиентам</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-								</ul>
+										<div class="topLine p-3 d-lg-none">
+											<div class="mb-4">
+												<div class="strong mb-2"><a class="text-body" href="mailto:info@newclients1.ru">info@newclients1.ru</a></div>
+												<div class="small text-secondary">Санкт-Петербург</div>
+											</div>
+											<div class="tell strong mb-2"><a class="text-body" href="tel:+7(812)703-86-28">
+													<svg class="icon icon-watsapp ">
+														<use xlink:href="img/svg/sprite.svg#watsapp"></use>
+													</svg>+7 (812) 703-86-28</a></div>
+											<div class="small text-secondary mb-2"> Пн-Пт: c 09:00 до 20:00</div>
+											<a class="topLine__btn w-100" href="#">Заказать звонок
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -119,9 +138,13 @@
 					<div class="container">
 						<div class="row">
 							<div class="headerBlock__col col-lg-7">
-								<h1> <strong>SEO-продвижение</strong><span>
-										 в&nbsp;конкурентных тематиках  с&nbsp;экономией до&nbsp;10&nbsp;раз по  
-										сравнению с&nbsp;другой рекламой</span></h1>
+								<h1>
+									 SEO-продвижение</h1>
+								<div class="h1">
+									 в&nbsp;конкурентных тематиках  
+									с&nbsp;экономией до&nbsp;10&nbsp;раз по  
+									сравнению с&nbsp;другой рекламой
+								</div>
 								<div class="headerBlock__foot">
 									<p>Рассчитайте стоимость и&nbsp;<strong>получите подарок</strong> &laquo;15&nbsp;признаков, что вам пытаются продать некачественное SEO-продвижение&raquo;
 										<!-- picture-->
@@ -2073,10 +2096,36 @@
 					<!-- +e.input-wrap-->
 					<button class="form-wrap__btn btn" type="submit"> Отправить 
 					</button>
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__small text text-secondary"><a href="#">С политикой  конфиденциальности</a>  ознакомлен(а)</span>
+						</label>
+					</div>
 				</form>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<div class="modal-win" id="modal-web" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title h5 strong mb-3">Оставьте ваш номер телефона и&nbsp;мы перезвоним вам  в&nbsp;течение 30&nbsp;минут
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="url" type="url" placeholder="Адрес сайта"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> Отправить 
+					</button>
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__small text text-secondary"><a href="#">С политикой  конфиденциальности</a>  ознакомлен(а)</span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-web-->
 		<div class="modal-win" id="modal-thanks" style="display: none">
 			<div class="form-wrap">
 				<div class="text-center">

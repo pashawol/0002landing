@@ -1,53 +1,55 @@
 
 $h: em(2);
+	@include media-breakpoint-down(lg) {
 
-.toggle-menu-mobile {
-	display: block;
-	height: $h* 12;
-	position: relative;
-	color: $primary;
-	font-size: 32px;
-	width: 1em;
-	cursor: pointer;
-	&.on {
-		color: #ffffff;
-	}
-
-	span:after,
-	span:before {
-		content: "";
-		position: absolute;
-		left: 0;
-	}
-
-	span {
-		@include a-cent(y);
-	}
-
-	span:before {
-
-
-		top: $h * 2;
-	}
-
-	span:after {
-		bottom: $h * 2;
-	}
-
-	span { 
-		display: block;
-	}
-
-	span,
-	span:after,
-	span:before {
-		// width: 32px;
-		width: 1em;
-		height: $h;
-		background-color: currentColor;
-		transition: all 0.3s;
-		backface-visibility: hidden;
-		border-radius: 6px;
+		.toggle-menu-mobile {
+			display: block;
+			height: $h* 12;
+			position: relative;
+			color: $primary;
+			font-size: 32px;
+			width: 1em;
+			cursor: pointer;
+			&.on {
+				color: #ffffff;
+			}
+			
+			span:after,
+			span:before {
+				content: "";
+				position: absolute;
+				left: 0;
+			}
+			
+			span {
+				@include a-cent(y);
+			}
+			
+			span:before {
+				
+				
+				top: $h * 2;
+			}
+			
+			span:after {
+				bottom: $h * 2;
+			}
+			
+			span { 
+				display: block;
+			}
+			
+			span,
+			span:after,
+			span:before {
+				// width: 32px;
+				width: 1em;
+				height: $h;
+				background-color: currentColor;
+				transition: all 0.3s;
+				backface-visibility: hidden;
+				border-radius: 6px;
+			
 		transform-origin: 50% 50%;
 	}
 
@@ -163,6 +165,12 @@ $h: em(2);
 	}
 
 	.tell a.text-body {
+		.icon{
+			position: relative;
+		}
 		// margin-left: 30px;
 	}
+}
+
+
 }

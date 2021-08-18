@@ -94,28 +94,47 @@
 					<div class="container">
 						<div class="row">
 							<div class="col">
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">SEO продвижение</a>
-										<ul class="sub-menu">
-											<li><a href=""> Наименование услуги</a></li>
-											<li><a href=""> Наименование услуги</a></li>
-											<li><a href=""> Наименование услуги</a></li>
+								<div class="menu-mobile menu-mobile--js">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
+									<div class="menu-mobile__inner">
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">SEO продвижение</a>
+												<ul class="sub-menu">
+													<li><a href=""> Наименование услуги</a></li>
+													<li><a href=""> Наименование услуги</a></li>
+													<li><a href=""> Наименование услуги</a></li>
+												</ul>
+											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клиентам</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 										</ul>
-									</li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кейсы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клиентам</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-								</ul>
+										<div class="topLine p-3 d-lg-none">
+											<div class="mb-4">
+												<div class="strong mb-2"><a class="text-body" href="mailto:info@newclients1.ru">info@newclients1.ru</a></div>
+												<div class="small text-secondary">Санкт-Петербург</div>
+											</div>
+											<div class="tell strong mb-2"><a class="text-body" href="tel:+7(812)703-86-28">
+													<svg class="icon icon-watsapp ">
+														<use xlink:href="img/svg/sprite.svg#watsapp"></use>
+													</svg>+7 (812) 703-86-28</a></div>
+											<div class="small text-secondary mb-2"> Пн-Пт: c 09:00 до 20:00</div>
+											<a class="topLine__btn w-100" href="#">Заказать звонок
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- end top-nav-->
 			</header>
-			<div class="section container"><a class="btn btn-primary m-2 link-modal-js" href="#modal-call">Обратный звонок</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-thanks">Спасибо</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-time">modal-time</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-gift">modal-gift</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-price">modal-price</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-qwiz">modal-qwiz</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-feedback">modal-feedback</a>
+			<div class="section container"><a class="btn btn-primary m-2 link-modal-js" href="#modal-call">Обратный звонок</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-thanks">Спасибо</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-time">modal-time</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-gift">modal-gift</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-price">modal-price</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-qwiz">modal-qwiz</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-feedback">modal-feedback</a><a class="btn btn-primary m-2 link-modal-js" href="#modal-web">modal-web</a>
 			</div>
 		</div>
 		<!--  start modals-->
@@ -131,10 +150,36 @@
 					<!-- +e.input-wrap-->
 					<button class="form-wrap__btn btn" type="submit"> Отправить 
 					</button>
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__small text text-secondary"><a href="#">С политикой  конфиденциальности</a>  ознакомлен(а)</span>
+						</label>
+					</div>
 				</form>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<div class="modal-win" id="modal-web" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title h5 strong mb-3">Оставьте ваш номер телефона и&nbsp;мы перезвоним вам  в&nbsp;течение 30&nbsp;минут
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="url" type="url" placeholder="Адрес сайта"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (___) ___-__-__" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> Отправить 
+					</button>
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__small text text-secondary"><a href="#">С политикой  конфиденциальности</a>  ознакомлен(а)</span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-web-->
 		<div class="modal-win" id="modal-thanks" style="display: none">
 			<div class="form-wrap">
 				<div class="text-center">
