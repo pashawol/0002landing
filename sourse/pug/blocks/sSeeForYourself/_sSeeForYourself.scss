@@ -85,7 +85,7 @@
 		}
 		padding: rem(25) rem(15);
 		position: relative;
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-up(md) {
 
 				&::before{
 					content: url(../img/@2x/webp/woman.webp);
