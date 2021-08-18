@@ -224,7 +224,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg") !d
 //
 // Style anchor elements.
 
-$link-color: $primary !default;
+$link-color: $success !default;
 $link-decoration: none !default;
 $link-shade-percentage: 20% !default;
 $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
@@ -382,7 +382,7 @@ $h2-font-size: rem(38) !default;
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: rem(24) !default;
 $h5-font-size: rem(21) !default;
-$h6-font-size: $font-size-base !default;
+$h6-font-size: rem(18) !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -667,7 +667,7 @@ $form-color-width: 3rem !default;
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
-$form-check-input-width: 1em !default;
+$form-check-input-width: 1.4em !default;
 $form-check-min-height: $font-size-base * $line-height-base !default;
 $form-check-padding-start: $form-check-input-width+.5em !default;
 $form-check-margin-bottom: .125rem !default;
@@ -685,7 +685,7 @@ $form-check-input-focus-border: $input-focus-border-color !default;
 $form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color: $component-active-color !default;
-$form-check-input-checked-bg-color: $component-active-bg !default;
+$form-check-input-checked-bg-color: $input-focus-border-color !default;
 $form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
 $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;

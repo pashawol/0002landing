@@ -47,68 +47,110 @@ mixin modal()
 					+e.BUTTON.btn.btn(type="submit"  )  Отправить 
 	// #modal-gift
 	+b.modal-win--qwiz.p-0(id="modal-qwiz" class=" " style="display: none" )
-		+b.form-wrap
-			.row.gx-0
-				.col-lg-8
-					+b.modal-left
-						mixin item(t,w,st)
-							+e.step(data-stock= st)&attributes(attributes)
-								+e.head= t
-								+e.body
-									block
-								+e.footer
-									.row
-										.col
-											+e.progress-text Готово #[span= w]%
-											+b.progress
-												+e.bar(style=`width: ${w}%;`)
-										.col-auto
-											+e.btn--prev.btn-light(type="button")
-												+icon("arrow-left")
-										.col-auto
-											+e.btn--next.btn-gradient(type="button") далее
-						mixin radio(t,n)
-							+b.LABEL.custom-radio
-								input(type="radio", name= n)
-								+e.block
-									+e.circle
-									= t
+		form
+			+b.form-wrap.active
+				.row.gx-0
+					.col-lg-8
+						+b.modal-left
+							mixin item(t,w,st)
+								+e.step(data-stock= st)&attributes(attributes)
+									+e.head= t
+									+e.body
+										block
+									+e.footer
+										.row
+											.col
+												+e.progress-text Готово #[span= w]%
+												+b.progress
+													+e.bar(style=`width: ${w}%;`)
+											.col-auto
+												+e.btn--prev.btn-light(type="button")
+													+icon("arrow-left")
+											.col-auto
+												+e.btn--next.btn-gradient(type="button") далее
+							mixin radio(t,n)
+								+b.LABEL.custom-radio
+									input(type="radio", name= n)
+									+e.block
+										+e.circle
+										= t
 
-						+item('В каком регионе вам нужно продвинуть сайт?',0, 0).active
-							+radio('Москва','radio-city')
-							+radio('Санкт-Петербург','radio-city')
-							+radio('Город миллионник','radio-city')
-							+radio('Продвижение в нескольких регионах','radio-city')
-							+radio('Продвижение по всей России','radio-city')
-							+radio('Пока точно не знаю, нужна консультация','radio-city')
-						+item('Какой у Вас сайт?','25',3)
-							+radio('Одностраничный лендинг','radio-site')
-							+radio('Многостраничный сайт','radio-site')
-							+radio('Затрудняюсь с ответом','radio-site')
-						+item('Какая тематика у Вашего сайта?','50',6)
-							+radio('Ремонт','radio-theme')
-							+radio('Недвижимость','radio-theme')
-							+radio('Услуги населению','radio-theme')
-							+radio('Строительство','radio-theme')
-							+radio('Услуги для бизнеса','radio-theme')
-							+radio('Медицина','radio-theme')
-							+radio('Другое','radio-theme')
-						+item('Вы хотите "SEO-под ключ"  или у Вас есть программист, который будет вносить изменения по нашкму ТЗ?','75',9)
-							+radio('Будет работать наш программист','radio-prog')
-							+radio('SEO под ключ','radio-prog')
-				.col
-					+b.modal-right
-						+e.head
-							+e.stock Ваша скидка #[span 0]%
-						+e.body
-							+b.seo
-								+e.avatar
-									+pic("avatar.png",'',0)
-								div
-									.fw-500 Анастасия Королькова
-									.text-secondary SEO-специалист
-							p.text-secondary Если ваш бизнес ориентирован на какой-то регион, то продвигать сайт надо по геозависимым запросам — ключевым словам, которые привязаны к этой территории, так как пользователи ищут услуги или товары по таким запросам, и рассчитывают увидеть на странице поиска местные компании.
-						+e.footer
+							+item('В каком регионе вам нужно продвинуть сайт?',0, 0).active
+								+radio('Москва','radio-city')
+								+radio('Санкт-Петербург','radio-city')
+								+radio('Город миллионник','radio-city')
+								+radio('Продвижение в нескольких регионах','radio-city')
+								+radio('Продвижение по всей России','radio-city')
+								+radio('Пока точно не знаю, нужна консультация','radio-city')
+							+item('Какой у Вас сайт?','25',3)
+								+radio('Одностраничный лендинг','radio-site')
+								+radio('Многостраничный сайт','radio-site')
+								+radio('Затрудняюсь с ответом','radio-site')
+							+item('Какая тематика у Вашего сайта?','50',6)
+								+radio('Ремонт','radio-theme')
+								+radio('Недвижимость','radio-theme')
+								+radio('Услуги населению','radio-theme')
+								+radio('Строительство','radio-theme')
+								+radio('Услуги для бизнеса','radio-theme')
+								+radio('Медицина','radio-theme')
+								+radio('Другое','radio-theme')
+							+item('Вы хотите "SEO-под ключ"  или у Вас есть программист, который будет вносить изменения по нашкму ТЗ?','75',9)
+								+radio('Будет работать наш программист','radio-prog')
+								+radio('SEO под ключ','radio-prog')
+					.col
+						+b.modal-right
+							+e.head
+								+e.stock Ваша скидка #[span 0]%
+							+e.body
+								+b.seo
+									+e.avatar
+										+pic("avatar.png",'',0)
+									div
+										.fw-500 Анастасия Королькова
+										.text-secondary SEO-специалист
+								p.text-secondary Если ваш бизнес ориентирован на какой-то регион, то продвигать сайт надо по геозависимым запросам — ключевым словам, которые привязаны к этой территории, так как пользователи ищут услуги или товары по таким запросам, и рассчитывают увидеть на странице поиска местные компании.
+							+e.footer
+			+b.form-wrap
+				.row
+					.col-lg-7
+						+b.modal-left 
+							+e.footer.pb-5
+								.row
+									.col-7
+										+e.progress-text.smallest Отлично, последний шаг, 95%
+										+b.progress
+											+e.bar(style=`width: 95%;`)
+							.h4.mb-3 Спасибо за&nbsp;Ваши ответы, мы&nbsp;уже готовим результат.
+
+							.h6.mb-3 Укажите Ваш номер телефона, на&nbsp;него вы&nbsp;получите расчет, а&nbsp;также за&nbsp;номером закрепим скидку и&nbsp;аудит
+
+							.h6.text-secondary.mb-3 Ваши бонусы
+							+pic("feedback-paper.jpg").last-img.d-none.d-lg-block
+					.col
+						+b.modal-right--form
+							+e.head
+								+e.stock Ваша скидка   9%
+							+e.form
+								+b.mass
+									+e.LABEL.item(style="--color:#05c847") 
+										input(type="radio" name="soc" value='whatsapp' checked)
+										+icon('whatsapp')
+										
+									+e.LABEL.item(style="--color:#7e499f") 
+										input(type="radio" name="soc" value='viber')
+										+icon('viber')
+									+e.LABEL.item(style="--color:#00a1e7;") 
+										input(type="radio" name="soc" value='telegram')
+										+icon('telegram')
+									//- +e.LABEL.item(style="--color: #1e97f6") 
+									//- 	input(type="radio" name="soc" value='direct')
+									//- 	+icon('direct')
+
+								+input("+7 (___) ___-__-__",'tel')(required)  
+								+e.BUTTON.btn.btn.btn-gradient(type="submit"  )  Отправить 
+								+policy
+
+								
 	// #modal-qwiz
 	+b.modal-win--lg.--price(id="modal-price" class=" " style="display: none" )
 		+b.form-wrap

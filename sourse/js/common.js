@@ -331,8 +331,9 @@ $(".sCases__slide").each(function(){
 		let stock = next.data("stock"); 
 		console.log(next);
 		if (!next.length) { 
-			Fancybox.close();
-			Fancybox.show([{ src: "#modal-feedback", type: "inline" }]);
+			th.parents(".form-wrap").removeClass('active').next().addClass("active")
+			// Fancybox.close();
+			// Fancybox.show([{ src: "#modal-feedback", type: "inline" }]);
 		}
 		else {
 			stockText.text(stock);
