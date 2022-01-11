@@ -1,6 +1,7 @@
 // start .sCases
 .sCases {
 		--sPT: 90px;
+		padding-bottom: 0;
 		--sPB: 110px;
 		// --sTPB: ;
 		h2{
@@ -113,6 +114,68 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	&__wrap{
+		background-color: $body-color;
+		color: #fff;
+		.swiper-button-hand{
+			&::before{
+				content: 'Листай';
+				@include a-cent1(x);
+				top: 100%;
+				margin-top: 19px;
+				border-radius: 12px;
+				background-color: s;
+				font-style: italic;
+				font-size: 12px;
+				height: 20px;
+				padding: rem(3) rem(10) rem(1);
+				color: $body-color;
+				line-height: 1.2;
+				vertical-align: top;
+			}
+		}
+	}
+	&__foot-text{
+		margin-top: 40px;
+		padding-bottom: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 800px;
+		text-align: center;
+		font-weight: 500;
+		strong{
+			display: inline-block;
+			border-radius: 12px;
+			background-color: $primary;
+			padding: rem(1) rem(5);
+		}
+	}
+	&__img-wrap{
+		text-align: center;
+		margin-top: -70px;
+		img{
+			max-width: 180px;
+			height: auto;
+		}
+	}
+	&--new &__col{
+		margin-top: 53px;
+		p{
+			font-weight: normal;
+			font-size: 16px;
+		}
+	}
+	&--new{
+		p.fw-500{
+
+		}
+		h2 strong{
+			display: inline-block;
+			border-radius: 12px;
+			background-color: $primary;
+			padding: rem(1) rem(5);
+		}
+	}
 } // end.sCases
 
 
@@ -131,7 +194,9 @@
 	margin-right: auto;
 	background-color: #f6f7fa;
 	overflow: hidden;
-	// overflow: hidden;
+	overflow: hidden;
+	border-radius: 12px;
+	
 	&__item{
 		position: absolute;
 		top: 0;

@@ -363,6 +363,10 @@ function eventHandler() {
 			type: "inline"
 		}]);
 	});
+	$(".btn-more-js").click(function () {
+		$(".sCompare__item:hidden").slideDown();
+		$(this).hide();
+	});
 }
 
 ;

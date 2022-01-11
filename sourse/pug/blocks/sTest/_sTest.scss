@@ -5,11 +5,14 @@
 		// --sTPB: ;
 
 			--sPT: 0;
-			--sPB: 0;
+			// --sPB: 0;
 			--sTPB: 20px;
 
 			background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, $primary 100%);
+			&--new{
+				background: -webkit-linear-gradient(top, $body-color 0%, $primary 100%);
 
+			}
 			&__content {
 				margin-left: auto;
 				max-width: rem(542);

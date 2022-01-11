@@ -19,8 +19,12 @@ mixin sCalc(data)
 							li #[strong Анализ конкурентов] (5-10)
 							li #[strong Сам аудит] (выводы в формате Word 
 							li как именно будет продвигаться сайт)
-					+pic('list-calc.png','',0).list-img
-					+pic('text.png').text-img
+					//- +pic('list-calc.png','',0).list-img
+					picture.list-img
+						img(src="img/list-calc.png", loading="lazy"  alt="")
+					img(src="img/stock-img.png",loading="lazy" alt="").stock-img
+					//- +pic('text.png').text-img
+
 
 
 	// end sCalc

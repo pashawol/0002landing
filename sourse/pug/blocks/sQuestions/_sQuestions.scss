@@ -17,12 +17,24 @@
 			}
 			max-width: rem(410);
 			}
+			.section-title{
+				h2{
+					max-width: none;
+
+				}
+			}
 		.man{
+
 			margin-right: -35px;
 			margin-left: -15px;
 		}
 		.block-panel{
 			position: relative;
+			&--new{
+				@include media-breakpoint-up(xl){
+				padding-bottom: 100px !important;
+			}
+			}
 			&::after{
 				content: '';
 				height: 60px;
@@ -66,6 +78,45 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+			}
+
+			&__item-list{
+				border-radius: 12px;
+				background-color: #ffffff;
+				font-weight: 300; 
+				padding-left: rem(52);
+				max-width: rem(1560);
+				&:last-child{
+					// margin-bottom: 160px;
+					--border: transparent;
+				}
+				@include mt;
+				position: relative;
+				&:hover{
+					box-shadow: 0 $border-radius 17px 4px rgba(202, 207, 221, 0.21);
+					--border: transparent;
+					z-index: 4;
+				}
+			}
+			&__text-list{
+				@include mt;
+				font-size: rem(20);
+				padding-top: rem(30);
+				padding-bottom: rem(30);
+				padding-right: 30px;
+				border-bottom: 1px solid var(--border, #e4e6ec);
+				display: flex;
+				letter-spacing: normal;
+				&::before{
+					content: '?';
+					margin-right: rem(30);
+					font-size: rem(30);
+					line-height: 1;
+					margin-top: em(-1);
+					color: #ebc548;
+					@extend .mono;
+					font-weight: 800;
+				}
 			}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -35,3 +35,44 @@ mixin sSeeForYourself(data)
 
 
 	// end sSeeForYourself
+
+	
+mixin sSeeForYourself(data)
+	// start sSeeForYourself
+	+b.SECTION.sSeeForYourself--new.section#sSeeForYourself&attributes(attributes)
+		.container
+			.block-panel.block-panel--left.tabs
+				.row
+
+					+e.col.col-lg-6
+						+b.section-title 
+							h2 Убедитесь сами, что мы&nbsp;действительно знаем  как #[span вывести вас в&nbsp;ТОП]
+							p Этапы нашей работы в&nbsp;следующие 6&nbsp;месяцев, расписали по&nbsp;шагам, но&nbsp;многое делаем параллельно
+
+						.tabs__caption
+							.tabs__btn.active 1
+							- for (var x = 2; x < 15; x++)
+								.tabs__btn= x
+					.col
+						.tabs__wrap
+							mixin item(x)
+								.tabs__content&attributes(attributes)
+									h4 
+										= x 
+										|.  Анализ конкурентов по тематике
+									p Цель – выявить лидеров, которые показывают рост посещаемости, проанализировать их и выписать себе необходимые данные для размещения на своем сайте
+									ul 
+										li Всегда ищем конкурентов по&nbsp;Москве
+										li Ищем молодые домены, которые показывают хороший рост
+										li Фиксируем статистические показатели&nbsp;&mdash; возраст домена, количество страниц, трафик 
+										li Из&nbsp;общего списка 20&nbsp;конкурентов выделяем 2-3&nbsp;лидера, которые выделяются из&nbsp;общей массы
+										li На&nbsp;основе лидеров готовим план продвижения
+										li Выделяем наличие коммерческих блоков необходимых для продвижения каждой страницы
+							+item(1).active
+							- for (var x = 2; x < 15; x++)
+								+item(x)
+
+
+	// end sSeeForYourself
+
+	

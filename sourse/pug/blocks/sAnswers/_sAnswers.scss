@@ -239,3 +239,87 @@
 		}
 	}
 }
+
+.sAnswers3{
+	padding: 0 !important;
+	.container{
+		padding-bottom: 130px;
+		padding-top: 130px;
+		position: relative;
+		@include media-breakpoint-down(md) {
+			padding-bottom: 400px;
+		}
+		&::after,	
+		&::before	{
+				content: '';
+				position: absolute;
+			}
+			@include media-breakpoint-up(sm) {
+
+				&::before{
+					content: url(../img/man-1.png);
+					left: -170px;
+					bottom: -20px;
+				}
+			}
+			
+			&::after{
+				content: url(../img/man-2.png);
+				@include media-breakpoint-up(sm) {
+
+					right: -200px;
+				} 
+				right: -60px;
+				bottom: -240px;
+			}
+	}
+
+	.section-title--base{
+		text-align: center;
+		max-width: none;
+		h2{
+			max-width: none; 
+		}
+		.p{
+			font-size: rem(20);
+			font-weight: 800;
+			text-transform: uppercase;
+		}
+	}
+	&__items{
+		@include media-breakpoint-up(lg) {
+
+			display: flex;
+		}
+		@include media-breakpoint-up(md) {
+
+			padding: rem(20) rem(120);
+		}
+		padding: rem(20) 0;
+	
+	}
+	&__item{
+			@include media-breakpoint-up(sm) {
+
+				padding-left: 27px;
+				padding-right: 27px;
+			}
+		display: flex;
+		margin-bottom: 2rem;
+		&::before{
+			content: var(--symbol, ' ');
+			width: 80px;
+			height: 80px;
+			flex: 0 0 auto;
+			border-radius: 50%;
+			margin-right: 25px;
+			background-color: #fff;
+			font-size: 40px;
+			font-weight: 800;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $primary;
+		}
+	}
+}

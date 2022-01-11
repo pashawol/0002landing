@@ -95,6 +95,7 @@
 		font-size: rem(11);
 		line-height: math.div(21, 11);
 		padding: rem(10.5);
+		padding: 0;
 		border-width: 2px;
 		margin-top: rem(14);
 		color: $white;
@@ -155,4 +156,21 @@
 
 	@include media-breakpoint-down(xs) {
 	}
+}
+
+
+
+.footer__btn a {
+	display: block;
+	color: #fff;
+	padding: .65625rem;
+}
+
+.footer__btn a:hover {
+	color: #66b544;
+}
+
+.footer__btn:hover {
+	background-color: transparent;
+	border-color: #66b544
 }

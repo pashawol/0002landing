@@ -3,6 +3,10 @@
 		--sPT: 0;
 		--sPB: 0; 
 		background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, $primary 100%);
+		&--new{
+			background: -webkit-linear-gradient(bottom, $body-color 0%, $primary 100%);
+
+		}
 		margin-top: -2px;
 		// --sTPB: ;
 		h2{
@@ -85,6 +89,7 @@
 		}
 		padding: rem(25) rem(15);
 		position: relative;
+		min-height: 100%;
 			@include media-breakpoint-up(md) {
 
 				&::before{

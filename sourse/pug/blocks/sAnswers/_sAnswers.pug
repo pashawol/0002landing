@@ -1,16 +1,16 @@
-mixin sAnswers(data)
-	// start sAnswers
-	+b.SECTION.sAnswers.section#sAnswers&attributes(attributes)
-		.container
-			.row
-				.col-md-6.col-sm-7
-					+b.section-title
-						h2 У нас есть  достойные ответы
-					p Так как за&nbsp;последние 1,5 года работы от&nbsp;нас не&nbsp;ушёл ни&nbsp;один клиент
-				.col.align-self-end
-					+pic(`phone.png`,'',0)
+//- mixin sAnswers(data)
+//- 	// start sAnswers
+//- 	+b.SECTION.sAnswers.section#sAnswers&attributes(attributes)
+//- 		.container
+//- 			.row
+//- 				.col-md-6.col-sm-7
+//- 					+b.section-title
+//- 						h2 У нас есть  достойные ответы
+//- 					p Так как за&nbsp;последние 1,5 года работы от&nbsp;нас не&nbsp;ушёл ни&nbsp;один клиент
+//- 				.col.align-self-end
+//- 					+pic(`phone.png`,'',0)
 				
-	// end sAnswers
+//- 	// end sAnswers
 mixin sAnswers2(data)
 	// start sAnswers
 	+b.SECTION.sAnswers2.sAnswers.section#sAnswers&attributes(attributes)
@@ -26,4 +26,16 @@ mixin sAnswers2(data)
 				+e.name
 					+e.name-title Кудрявцев Сергей
 					+e.name-caption Руководитель<br />компании
+	// end sAnswers2
+	
+mixin sAnswers(data)
+	// start sAnswers
+	+b.SECTION.sAnswers3.sAnswers#sAnswers&attributes(attributes)
+		.container.section
+			+b.section-title--base
+				h2 У&nbsp;нас есть  достойные ответы
+				.p Так как за&nbsp;последние 1,5 года работы от&nbsp;нас не&nbsp;ушёл ни&nbsp;один клиент
+			+e.items
+				+e.item(style="--symbol:'?'") Как такое может быть? Ведь SEO&nbsp;&mdash; это непредсказуемый непонятный инструмент, и&nbsp;результат невозможно предсказать
+				+e.item(style="--symbol:'!'") Но&nbsp;только в&nbsp;том случае, если вы&nbsp;обращаетесь к&nbsp;SEO-специалистам, которые часто даже в&nbsp;коде не&nbsp;разбираются
 	// end sAnswers2

@@ -1,7 +1,7 @@
 // start .sCalc
 .sCalc {
 		// --sPT: ;
-		--sPB: 0;
+		--sPB: 40px;
 		// --sTPB: ;
 		position: relative;
 		overflow: hidden;
@@ -15,6 +15,7 @@
 			p{
 				max-width: rem(370);
 				font-weight: 300;
+				font-weight: bold;
 			}
 		}
 		.small{
@@ -90,6 +91,12 @@
 						max-width: 500px;
 					}
 				}
+			}
+			.stock-img{
+				position: absolute;
+				bottom: 20px;
+				left: 20px;
+				z-index: 3;
 			}
 		}
 

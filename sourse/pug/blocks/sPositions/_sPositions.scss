@@ -3,6 +3,16 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		&--new{
+			// p span{
+			// 	border-radius: 12px;
+			// background-color: $primary;
+			// }
+			h2{
+				color: #fff;
+			}
+			background-color: $body-color ;
+		}
 	&__row{
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
@@ -15,7 +25,33 @@
 		--sp-x: #{rem(28)};
 	}
 	--sp-x: #{rem(15)};
+	&--new &__col{
+		position: relative;
+		
+		// border-right: 2px solid $primary;
+			@include media-breakpoint-up(lg) {
 
+				&::before{
+					content: '';
+					position: absolute;
+					right: 0;
+					top: 0;
+					height: calc(100% - 20px);
+					background-color:  $primary;
+					width: 2px;
+				}
+			}
+	}
+	&__main-row{
+		@include media-breakpoint-up(lg) {
+
+			--bs-gutter-x: 180px;
+			// position: relative;
+			.sPositions__head{
+				border: none;
+			}
+		} 
+	}
 		&__item{
 			border-radius: $border-radius;
 			background-color: #ffffff;
@@ -147,6 +183,27 @@
 		font-weight: 500;
 		font-size: 12px;
 	}
+	&__btn-more-new{
+		@extend .btn; 
+		text-transform: uppercase; 
+		width: 100%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(300);
+		padding: rem(20);
+		margin-top: rem(30);
+		font-weight: 500;
+		font-size: 12px;
+
+	}
+
+	&--new{
+			p span{
+				border-radius: 12px;
+			background-color: $primary;
+			}
+		}
 	@include media-breakpoint-up(xl) {
 		--sPB: 110px;
 	}

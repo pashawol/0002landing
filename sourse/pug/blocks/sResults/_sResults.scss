@@ -5,6 +5,7 @@
 		--sTPB: 20px;
 
 		background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, $primary 100%);
+		
 		&__content{
 			margin-left: auto;
 			max-width: rem(572);
@@ -49,6 +50,33 @@
 			margin-right: rem(14);
 		}
 	}
+
+	&--new{
+		h2{
+			text-align: center;
+		}
+			background: -webkit-linear-gradient(top, rgba($body-color, 1) 0%, $primary 100%);
+			li{
+				strong{
+					// display: inline-block;
+					border-radius: 12px;
+					background-color: $primary;
+					padding: rem(0) rem(10);
+				}
+			}
+			.block-panel{
+
+				picture{
+					--pos: 160px;
+					left: var(--pos);
+					top: var(--pos);
+					width: calc(60% - var(--pos));
+					height: calc(100% - var(--pos));
+					border-radius: 0;
+
+				}
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -87,3 +87,95 @@ mixin sPositions(data)
 					
 			+e.BUTTON.btn-more(type="button") Посмотреть больше кейсов
 	// end sPositions
+mixin sPositions(data)
+	// start sPositions
+	+b.SECTION.sPositions--new.section#sPositions&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наш SEO действительно работает даже в&nbsp;самых конкурентных тематиках
+				
+			+e.row.row
+				mixin item(data)
+					.col-lg-12
+						+e.item
+							+e.main-row.row 
+								+e.col.col-lg-6
+									+e.head 
+										.row
+											.col-sm-auto.text-sm-end.order-sm-last
+												+pic(`logo-${data.img}.png`,'',0)
+												+e.link(href= data.link).small.text-secondary= data.link
+											.col
+												+e.title.h4= data.t
+												p
+													span!= data.p
+
+										+e.link-more(href="#") читать полностью
+								.col-lg-6
+									+e.body
+										+e.row.row
+											.col
+												+e.title-row.text-secondary выведено запросов
+												+e.row-text В ТОП-10
+												+e.row-text В ТОП-30
+											.col-auto
+												+e.block--before
+													+e.title-row.text-secondary Было
+													+e.row-text= data.before1 
+													+e.row-text= data.before2
+											.col-auto
+												+e.block--after
+													+e.title-row стало
+													+e.row-text= data.after1
+													+e.row-text= data.after2
+									+e.link-more--js(href="#") Посмотреть позиции
+									+e.hidden-block
+										table
+											tr 
+												th запрос
+												th.text-center позиция
+											mixin tr(t1, t2)
+												tr 
+													td= t1
+													td.text-center
+														.text-primary.tdu= t2
+											+tr('Септик купить','2')
+											+tr('Септик под ключ','2')
+											+tr('Водоснабжение из колодца','2')
+											+tr('Септик цена','1')
+											+tr('Автономная канализация для частного дома','6')
+											+tr('Автономная канализация','2')
+				+item({
+					img:"1",
+					t:"Ремонт квартир",
+					p:`Благодаря SEO увеличили штат  на&nbsp;7&nbsp;новых бригад`,
+					link:"restroymaster.ru",
+					before1:"8%",
+					before2:"26%",
+					after1:"57%",
+					after2:"94%",
+				})
+				+item({
+					img:"2",
+					t:"Строительство  загородных домов",
+					p:`Тратят на&nbsp;SEO в&nbsp;4&nbsp;раза меньше, чем ранее на&nbsp; контекст, а&nbsp;заказов стало в&nbsp;2&nbsp;раза больше`,
+					link:"Дом-навек.рф",
+					before1:"25%",
+					before2:"36%",
+					after1:"80%",
+					after2:"",
+				})
+				- for (var x = 0; x < 2; x++)
+					+item({
+						img:"3",
+						t:"Автономные канализации",
+						p:`Снизили стоимость заявки в&nbsp;3&nbsp;раза. Увеличили трафик в&nbsp;2&nbsp;раза. Клиент говорит, что самые конверсионные лиды из&nbsp;СЕО`,
+						link:"frear.ru",
+						before1:"25%",
+						before2:"36%",
+						after1:"80%",
+						after2:"95%",
+					})
+					
+			+e.BUTTON.btn-more-new.btn-gradient(type="button") Посмотреть больше кейсов
+	// end sPositions

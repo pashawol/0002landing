@@ -620,3 +620,50 @@ iframe {
 .fw-400{
 	font-weight: 400;
 }
+
+
+
+.button-up {
+	background: #406295;
+	border-radius: 50%;
+	bottom: 120px;
+	cursor: pointer;
+	display: none;
+	height: 40px;
+	position: fixed;
+	right: 20px;
+	width: 40px;
+	z-index: 10;
+}
+
+.button-up:before {
+	background: url(/images/button-up.png)no-repeat;
+	bottom: 0;
+	content: '';
+	height: 20px;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+}
+
+
+.icon-watsapp { 
+	color: #2c8c03;
+}
+
+// .footer__btn {
+// 	padding: 0;
+// }
+
+// .footer__btn a {
+// 	display: block;
+// 	color: #fff;
+// 	padding: .65625rem;
+// }
+
+// .footer__btn a:hover {
+// 	color: #66b544;
+// }
